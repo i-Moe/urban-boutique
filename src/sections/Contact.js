@@ -1,15 +1,20 @@
-import React from 'react';
+import React from "react";
+import FadeIn from "../components/FadeIn";
 
 const Contact = () => {
   return (
-    <section className="pt-40 pb-28 bg-mint  relative mt-[-120px] mb-[-110px] z-[-120]" id="contact">
+    <section
+      className="pt-40 pb-28 bg-mint  relative mt-[-120px] mb-[-110px] z-[-120]"
+      id="contact"
+    >
       <div className="container-max-w-5xl">
-        <h2 className="text-3xl font-bold text-center mb-12">Contact Us</h2>
-        <div className="flex flex-wrap -mx-4">
-
-
-          {/* Contact Form */}
-          {/* <div className="w-full md:w-2/3 px-4 mb-8">
+        <FadeIn>
+          <h2 className="text-3xl font-bold text-center mb-12">Contact Us</h2>
+        </FadeIn>
+        <FadeIn>
+          <div className="flex flex-wrap -mx-4">
+            {/* Contact Form */}
+            {/* <div className="w-full md:w-2/3 px-4 mb-8">
             <form className="bg-cream p-8 rounded-xl border border-choco shadow-solid">
               <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
@@ -68,38 +73,38 @@ const Contact = () => {
             </form>
           </div> */}
 
-          {/* Contact Information */}
-          <div className="w-full px-4 mb-8">
-            <div className="bg-cream p-8 rounded-xl border border-choco shadow-solid h-full flex flex-col justify-center">
-              <h3 className="text-xl font-semibold mb-4">Get In Touch</h3>
-              <p className="mb-4">
-                Feel free to reach out to us via email. We look forward to hearing from you!&#10084;&#65039;
-              </p>
-              <ul>
-                <li className="mb-2">
-                  <strong>Email:</strong> cmidiapaga@gmail.com
-                </li>
-                {/* <li className="mb-2">
+            {/* Contact Information */}
+            <div className="w-full px-4 mb-8">
+              <div className="bg-cream p-8 rounded-xl border border-choco shadow-solid h-full flex flex-col justify-center">
+                <h3 className="text-xl font-semibold mb-4">Get In Touch</h3>
+                <p className="mb-4">
+                  Feel free to reach out to us via email. We look forward to
+                  hearing from you!&#10084;&#65039;
+                </p>
+                <ul>
+                  <li className="mb-2">
+                    <strong>Email:</strong> cmidiapaga@gmail.com
+                  </li>
+                  {/* <li className="mb-2">
                   <strong>Phone:</strong> +123 456 7890
                 </li> */}
-                <li className="mb-2">
-                  <strong>Address:</strong> World
-                </li>
-                {/* <li>
+                  <li className="mb-2">
+                    <strong>Address:</strong> World
+                  </li>
+                  {/* <li>
                   <strong>Social Media:</strong> Links to your social media profiles
                 </li> */}
-              </ul>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );
 };
 
 export default Contact;
-
-
 
 // import React from 'react';
 
