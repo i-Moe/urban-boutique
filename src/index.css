@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+
+
+body {
+  @apply font-sans; /* This applies the font globally */
+  @apply text-choco; /* This applies the text color globally */
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Keep contents within an width of 5xl */
+.container-max-w-5xl {
+  @apply container mx-auto px-4 max-w-5xl;
+}
+
+/* Effect for dropdown menu */
+ @keyframes scaleUpAndShake {
+  0% {
+    transform: scale(0.1) translateX(0);
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: scale(1) translateX(3px);
+    opacity: 1
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scale-up-and-shake {
+  animation: scaleUpAndShake 0.4s ease-in-out forwards;
+}
+
+
+.text-stroke {
+  -webkit-text-stroke: 1px var(--tw-text-stroke-color);
+}
+
+.text-stroke-choco {
+  --tw-text-stroke-color: theme('colors.choco');
+}
