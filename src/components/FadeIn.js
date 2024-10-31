@@ -35,7 +35,7 @@ const FadeIn = ({ children, className = "" }) => {
   }, []); // Keep the dependency array empty
 
   return (
-    <div ref={ref} className={`transition-all ease-out duration-1000 ${animate} ${className}`}>
+    <div ref={ref} className={`transition-all ease-out duration-700 ${animate} ${className}`}>
       {children}
     </div>
   );
