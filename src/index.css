@@ -4,7 +4,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
 
-
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
 
 body {
   @apply font-sans; /* This applies the font globally */
