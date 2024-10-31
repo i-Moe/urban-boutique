@@ -8,12 +8,18 @@ html {
   scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
+
 body {
   @apply font-sans; /* This applies the font globally */
   @apply text-choco; /* This applies the text color globally */
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: url("./assets/images/paw.png"), auto;
+}
+
+a{
+  cursor: url("./assets/images/cat.png"), auto;
 }
 
 code {
