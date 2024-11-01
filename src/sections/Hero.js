@@ -42,7 +42,7 @@ const Hero = () => {
               <img
                 src={CatImage}
                 alt="Cat"
-                className="w-3/5 sm:w-full h-auto mx-auto rotate-3"
+                className="w-3/5 sm:w-full h-auto mx-auto rotate-3 cat-cursor"
               />
             </FadeIn>
           </div>

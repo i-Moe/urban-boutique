@@ -37,7 +37,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-2xl font-bold cursor-pointer"
+          className="text-2xl font-bold cat-cursor"
         >
           The Lazy Cat
         </div>
@@ -52,8 +52,8 @@ const Navbar = () => {
                 {/* Menu (Desktop) */}
                 <nav className="hidden sm:flex space-x-6">
                     <a href="#about" className="hover:text-mint">About</a>
-                    <a href="#services" className="hover:text-mint">Services</a>
-                    <a href="#clients" className="hover:text-vitamin">Clients</a>
+                    <a href="#services" className="hover:text-vitamin">Services</a>
+                    <a href="#clients" className="hover:text-mint">Clients</a>
                     <a href="#contact" className="hover:text-vitamin">Contact</a>
                 </nav>
             </div>

@@ -18,7 +18,7 @@ body {
   cursor: url("./assets/images/paw.png"), auto;
 }
 
-a{
+a, .cat-cursor{
   cursor: url("./assets/images/cat.png"), auto;
 }
 
