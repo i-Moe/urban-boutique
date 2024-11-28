@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Kanit', 'sans-serif'],
+        sans: ['"Cormorant Garamond"', 'sans-serif'],
       },
       boxShadow: {
         'solid': '4px 4px 0px rgba(56, 50, 42, 1)',
@@ -16,6 +16,7 @@ module.exports = {
         lemon: '#f5ae56',
         vitamin: '#ed775b',
         mint: '#028e87',
+        chillmint: '#69adaa',
         cream: '#f3e7d7',
       },
       textShadow: {

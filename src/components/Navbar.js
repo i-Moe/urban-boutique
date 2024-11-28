@@ -39,7 +39,7 @@ const Navbar = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="text-2xl font-bold cat-cursor"
         >
-          The Lazy Cat
+          Urban Boutique Hotel
         </div>
 
                 {/* Hamburger Menu (Mobile) */}
@@ -52,40 +52,40 @@ const Navbar = () => {
                 {/* Menu (Desktop) */}
                 <nav className="hidden sm:flex space-x-6">
                     <a href="#about" className="hover:text-mint">About</a>
-                    <a href="#services" className="hover:text-vitamin">Services</a>
-                    <a href="#clients" className="hover:text-mint">Clients</a>
-                    <a href="#contact" className="hover:text-vitamin">Contact</a>
+                    <a href="#rooms" className="hover:text-mint">Rooms</a>
+                    <a href="#gallery" className="hover:text-mint">Gallery</a>
+                    <a href="#contact" className="hover:text-mint">Contact</a>
                 </nav>
             </div>
 
  {/* Dropdown Menu (Mobile) */}
 <div
-    className={`absolute top-0 left-0 w-full z-[-10] bg-lemon border-b border-choco transition-transform duration-300 ease-in-out transform ${
+    className={`absolute top-0 left-0 w-full z-[-10] bg-choco border-b border-choco transition-transform duration-300 ease-in-out transform ${
         isOpen ? 'translate-y-0' : '-translate-y-full'
     }`}
 >
     <nav className="flex flex-col items-center pt-20 pb-5">
         <a
             href="#about"
-            className={`block px-4 py-2 hover:bg-mint w-full text-center transform transition duration-300 hover:text-cream ${isOpen ? 'animate-scale-up-and-shake' : ''}`}
+            className={`block px-4 py-2 text-cream w-full text-center transform transition duration-300 hover:text-cream`}
         >
             About
         </a>
         <a
-            href="#services"
-            className={`block px-4 py-2 hover:bg-mint w-full text-center transform transition duration-300 hover:text-cream ${isOpen ? 'animate-scale-up-and-shake' : ''}`}
+            href="#rooms"
+            className={`block px-4 py-2 text-cream w-full text-center transform transition duration-300 hover:text-cream`}
         >
-            Services
+            Rooms
         </a>
         <a
-            href="#clients"
-            className={`block px-4 py-2 hover:bg-vitamin w-full text-center transform transition duration-300 hover:text-cream ${isOpen ? 'animate-scale-up-and-shake' : ''}`}
+            href="#gallery"
+            className={`block px-4 py-2 text-cream w-full text-center transform transition duration-300 hover:text-cream`}
         >
-            Clients
+            Gallery
         </a>
         <a
             href="#contact"
-            className={`block px-4 py-2 hover:bg-vitamin w-full text-center transform transition duration-300 hover:text-cream ${isOpen ? 'animate-scale-up-and-shake' : ''}`}
+            className={`block px-4 py-2 text-cream w-full text-center transform transition duration-300 hover:text-cream`}
         >
             Contact
         </a>

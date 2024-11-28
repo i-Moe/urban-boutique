@@ -1,70 +1,62 @@
 import React from "react";
-import CatImage from "../assets/images/cat_no_bg.png";
+import roomImage from "../assets/images/room1.jpg";
 import HalfMoonDivider from "../assets/something/half-moon.svg";
 import FadeIn from "../components/FadeIn";
 
 const Hero = () => {
   return (
-    <>
-      <section className="bg-mint min-h-[90vh] flex items-center justify-center">
-        <div className="container-max-w-5xl flex flex-col sm:flex-row items-center sm:items-start justify-between text-center sm:text-left sm:px-10">
-          <div className="pt-16 md:pl-16 sm:w-3/5 mb-0 sm:mb-8">
-            <FadeIn>
-              <h1
-                className="text-cream text-stroke text-stroke-choco text-shadow-choco text-8xl lg:text-9xl font-bold mb-4"
-                style={{ lineHeight: "0.1" }}
+    <section
+      className="relative bg-cover bg-center min-h-[90vh] flex items-center justify-center"
+      style={{
+        backgroundImage: `url(${roomImage})`, // Replace with your hotel's image URL
+      }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="container mx-auto px-4 relative z-10 text-center sm:text-left text-white">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center sm:items-start justify-between">
+          <div className="sm:w-3/5 mb-8">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              Welcome to <br />
+              <span className="text-vitamin">Urban Boutique Hotel</span>
+            </h1>
+            <p className="text-lg sm:text-xl leading-relaxed sm:pl-4">
+              Where luxury meets comfort. Discover your perfect stay in the
+              heart of the city with unmatched hospitality, exceptional
+              amenities, and an unforgettable experience.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center sm:justify-start sm:items-center mt-8 gap-4">
+              <a
+                href="#rooms"
+                className="bg-vitamin text-white text-lg border border-vitamin px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-vitamin transition duration-300"
               >
-                Hello,
-                <span className="text-4xl lg:text-5xl">
-                  <br />
-                  my friends! We are
-                </span>
-                <br />
-                <span className="text-5xl lg:text-7xl">The Lazy Cat!</span>
-              </h1>
-              <p className="text-cream text-xl sm:pl-5">
-                Discover who we are,
-                <br />
-                our services, and more.
-              </p>
-              <div className="flex justify-center sm:justify-end sm:mr-8 mt-7 mb-5">
-                <a
-                  href="#contact"
-                  className="bg-vitamin text-cream text-lg border border-vitamin px-6 py-3 rounded-full font-semibold hover:bg-cream hover:text-vitamin transition duration-300"
-                >
-                  LET'S TALK!
-                </a>
-              </div>
-            </FadeIn>
-          </div>
-          <div className="sm:w-2/5">
-            <FadeIn>
-              <img
-                src={CatImage}
-                alt="Cat"
-                className="w-3/5 sm:w-full h-auto mx-auto rotate-3 cat-cursor"
-              />
-            </FadeIn>
+                Explore Our Rooms
+              </a>
+              <a
+                href="#contact"
+                className="bg-transparent text-white text-lg border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-vitamin transition duration-300 sm:ml-4"
+              >
+                Contact Us
+              </a>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <img
-        src={HalfMoonDivider}
-        alt="Half Moon divider"
-        className="block w-full 
-        
-        
-        relative mt-[-3px]
-          h-[40px] sm:h-[60px] lg:h-[100px]"
-      />
+    // <img
+    //   src={HalfMoonDivider}
+    //   alt="Half Moon divider"
+    //   className="block w-full
 
-      {/* <img
+    //   relative mt-[-3px]
+    //     h-[40px] sm:h-[60px] lg:h-[100px]"
+    // />
+
+    /* <img
         src={WavyDivider}
         alt="Wavy divider"
         className="block w-full mt-[-3px]"
-      /> */}
-    </>
+      /> */
   );
 };
 

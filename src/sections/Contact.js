@@ -4,12 +4,12 @@ import FadeIn from "../components/FadeIn";
 const Contact = () => {
   return (
     <section
-      className="pt-40 pb-28 bg-mint  relative mt-[-120px] mb-[-110px] z-[-120]"
+      className="pt-16 pb-36 bg-chillmint  relative  mb-[-110px] z-[-120]"
       id="contact"
     >
       <div className="container-max-w-5xl">
         <FadeIn>
-          <h2 className="text-3xl font-bold text-center mb-12">Contact Us</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Contact</h2>
         </FadeIn>
         <FadeIn>
           <div className="flex flex-wrap -mx-4">
@@ -75,21 +75,21 @@ const Contact = () => {
 
             {/* Contact Information */}
             <div className="w-full px-4 mb-8">
-              <div className="bg-cream p-8 rounded-xl border border-choco shadow-solid h-full flex flex-col justify-center">
+              <div className="bg-cream p-8 rounded-md border border-choco h-full flex flex-col justify-center">
                 <h3 className="text-xl font-semibold mb-4">Get In Touch</h3>
                 <p className="mb-4">
                   Feel free to reach out to us via email. We look forward to
                   hearing from you!&#10084;&#65039;
                 </p>
                 <ul>
+                  {/* {/* <li className="mb-2">
+                    /* <strong>Email:</strong> cmidiapaga@gmail.com
+                  </li> */ }
                   <li className="mb-2">
-                    <strong>Email:</strong> cmidiapaga@gmail.com
-                  </li>
-                  {/* <li className="mb-2">
-                  <strong>Phone:</strong> +123 456 7890
-                </li> */}
+                  <strong>Phone:</strong> +383 44 987 898
+                </li>
                   <li className="mb-2">
-                    <strong>Address:</strong> World
+                    <strong>Address:</strong> Xhavit Haziri 10, 10000 Pristina, Kosovo
                   </li>
                   {/* <li>
                   <strong>Social Media:</strong> Links to your social media profiles

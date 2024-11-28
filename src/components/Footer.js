@@ -16,12 +16,12 @@ const Footer = () => {
         <footer className="bg-choco text-cream py-4">
             <div className="container mx-auto text-center">
                 <div className="mt-2">
-                    <a href="#about" className="text-cream hover:text-lemon mx-2">About</a>
-                    <a href="#services" className="text-cream hover:text-lemon mx-2">Services</a>
-                    <a href="#clients" className="text-cream hover:text-vitamin mx-2">Clients</a>
+                    <a href="#about" className="text-cream hover:text-vitamin mx-2">About</a>
+                    <a href="#rooms" className="text-cream hover:text-vitamin mx-2">Rooms</a>
+                    <a href="#gallery" className="text-cream hover:text-vitamin mx-2">Gallery</a>
                     <a href="#contact" className="text-cream hover:text-vitamin mx-2">Contact</a>
                 </div>
-                <p className="text-sm my-2">&copy; {new Date().getFullYear()} The Lazy Cat. All rights reserved.</p>
+                <p className="text-sm my-2">&copy; {new Date().getFullYear()} Urban Boutique Hotel. All rights reserved.</p>
             </div>
         </footer>
 
