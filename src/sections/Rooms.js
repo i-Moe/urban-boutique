@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import FadeIn from "../components/FadeIn";
 import WavyDivider from "../assets/something/wavy-steps-mirrored.svg";
 import familyRoomImage from "../assets/images/family.jpg";
 import budgetDoubleRoomImage from "../assets/images/budget.jpg";
@@ -68,32 +69,41 @@ const Rooms = () => {
 
   return (
     <>
-    <section id="rooms" className="py-40 mt-[-150px] z-[-200] relative bg-chillmint">
-      <div className="w-screen">
-        <h2 className="text-4xl font-bold text-choco text-center my-12">Our Rooms</h2>
-        <Slider {...settings} >
-          {roomsData.map((room, index) => (
-            <div key={index} className="px-2">
-              <div className="bg-cream border border-choco rounded-lg overflow-hidden h-full flex flex-col min-h-[400px]">
-                {/* Image Section */}
-                <img
-                  src={room.image}
-                  alt={room.title}
-                  className="w-full h-48 object-cover rounded-t-lg"
-                />
-                {/* Content Section */}
-                <div className="p-4 text-left flex-grow flex flex-col">
-                  <h3 className="text-2xl font-semibold mb-2">{room.title}</h3>
-                  <p className="text-lg leading-6">{room.description}</p>
+      <section
+        id="rooms"
+        className="py-40 mt-[-150px] z-[-200] relative bg-chillmint"
+      >
+        <div className="w-screen">
+          <FadeIn>
+            <h2 className="text-4xl font-bold text-choco text-center my-12">
+              Our Rooms
+            </h2>
+          </FadeIn>
+          <Slider {...settings}>
+            {roomsData.map((room, index) => (
+              <div key={index} className="px-2">
+                <div className="bg-cream border border-choco rounded-lg overflow-hidden h-full flex flex-col min-h-[400px]">
+                  {/* Image Section */}
+                  <img
+                    src={room.image}
+                    alt={room.title}
+                    className="w-full h-48 object-cover rounded-t-lg"
+                  />
+                  {/* Content Section */}
+                  <div className="p-4 text-left flex-grow flex flex-col">
+                    <h3 className="text-2xl font-semibold mb-2">
+                      {room.title}
+                    </h3>
+                    <p className="text-lg leading-6">{room.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
-    </section>
+            ))}
+          </Slider>
+        </div>
+      </section>
 
-    <img
+      <img
         src={WavyDivider}
         alt="Wavy divider"
         className="block w-full mt-[-3px]"
