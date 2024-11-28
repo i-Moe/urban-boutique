@@ -23,18 +23,20 @@ const Gallery = () => {
 
   // Function to open the modal with a selected image
   const openModal = (image) => {
+    console.log("Opening modal with image:", image);
     setModalImage(image);
     setIsModalOpen(true);
   };
 
   // Function to close the modal
   const closeModal = () => {
+    console.log("Closing modal");
     setIsModalOpen(false);
     setModalImage("");
   };
 
   return (
-    <section id="gallery" className="py-40 mt-[-150px] z-[-250] relative bg-chillmint bg-cream">
+    <section id="gallery" className="py-40 mt-[-150px] z-[-250] relative bg-cream">
       <div className="container-max-w-5xl">
         <FadeIn>
         <h2 className="text-3xl font-bold text-center mb-10">Gallery</h2>

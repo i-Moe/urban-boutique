@@ -75,11 +75,10 @@ const Contact = () => {
 
             {/* Contact Information */}
             <div className="w-full px-4 mb-8">
-              <div className="bg-cream p-8 rounded-md border border-choco h-full flex flex-col justify-center">
+              <div className="bg-cream p-8 rounded-md border border-choco shadow-xl h-full flex flex-col justify-center">
                 <h3 className="text-xl font-semibold mb-4">Get In Touch</h3>
                 <p className="mb-4">
-                  Feel free to reach out to us via email. We look forward to
-                  hearing from you!&#10084;&#65039;
+                We look forward to welcoming you. For reservations, inquiries, or assistance, please contact us.
                 </p>
                 <ul>
                   {/* {/* <li className="mb-2">
