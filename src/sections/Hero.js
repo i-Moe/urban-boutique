@@ -1,6 +1,5 @@
 import React from "react";
-import roomImage from "../assets/images/room1.jpg";
-import HalfMoonDivider from "../assets/something/half-moon.svg";
+import roomImage from "../assets/images/family2.jpg";
 import FadeIn from "../components/FadeIn";
 
 const Hero = () => {

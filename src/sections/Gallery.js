@@ -1,19 +1,23 @@
 import React from "react";
 import FadeIn from "../components/FadeIn";
-import familyRoomImage from "../assets/images/family.jpg";
-import budgetDoubleRoomImage from "../assets/images/budget.jpg";
-import spaBathRoomImage from "../assets/images/double.jpg";
+import balconyImage from "../assets/images/balcony.jpg"
+import budgetRoomImage from "../assets/images/budget.jpg";
 import deluxeRoomImage from "../assets/images/deluxe.jpg";
+import doubleRoomImage from "../assets/images/double.jpg";
+import doubleRoomImage2 from "../assets/images/double2.jpg";
+import familyRoomImage from "../assets/images/family.jpg";
+import familyRoomImage2 from "../assets/images/family2.jpg";
+
+
 
 const galleryImages = [
+  balconyImage,
   familyRoomImage,
-  budgetDoubleRoomImage,
-  spaBathRoomImage,
-  deluxeRoomImage,
-  familyRoomImage,
-  budgetDoubleRoomImage,
-  spaBathRoomImage,
-  deluxeRoomImage,
+  familyRoomImage2,
+  budgetRoomImage,
+  doubleRoomImage,
+  doubleRoomImage2,
+  deluxeRoomImage
 ];
 
 const Gallery = () => {
