@@ -8,6 +8,10 @@ html {
   scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
+html, body {
+  @apply overflow-x-hidden;
+}
+
 
 body {
   @apply font-sans; /* This applies the font globally */
@@ -32,36 +36,14 @@ code {
   @apply container mx-auto px-4 max-w-5xl;
 }
 
-/* Effect for dropdown menu */
- @keyframes scaleUpAndShake {
-  0% {
-    transform: scale(0.1) translateX(0);
-    opacity: 0;
-  }
-  25% {
-    transform: translateX(-4px);
-  }
-  50% {
-    transform: scale(1) translateX(3px);
-    opacity: 1
-  }
-  75% {
-    transform: translateX(-2px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
+/* Custom CSS for the pagination dots */
+/* .slick-slider .slick-dots {
+  position: absolute;
+  bottom: -70px; /* Move the dots down by 50px */
+  /* left: 50%;
+  transform: translateX(-50%);
+} */ 
 
-.animate-scale-up-and-shake {
-  animation: scaleUpAndShake 0.4s ease-in-out forwards;
-}
-
-
-.text-stroke {
-  -webkit-text-stroke: 1px var(--tw-text-stroke-color);
-}
-
-.text-stroke-choco {
-  --tw-text-stroke-color: theme('colors.choco');
+.slick-track {
+  padding-bottom: 40px;
 }

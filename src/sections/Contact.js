@@ -88,7 +88,7 @@ const Contact = () => {
                   <strong>Phone:</strong> +383 44 987 898
                 </li>
                   <li className="mb-2">
-                    <strong>Address:</strong> Xhavit Haziri 10, 10000 Pristina, Kosovo
+                    <strong>Address:</strong> Luan Qelaj 5, 10000 Pristina, Kosovo
                   </li>
                   {/* <li>
                   <strong>Social Media:</strong> Links to your social media profiles

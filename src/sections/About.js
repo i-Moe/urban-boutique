@@ -18,7 +18,7 @@ const About = () => {
                 <img
                   src={balconyImage} // Add your balcony image import
                   alt="Balcony view"
-                  className="w-full h-auto rounded-md shadow-lg"
+                  className="w-full h-auto rounded-md shadow-xl"
                 />
               </FadeIn>
             </div>

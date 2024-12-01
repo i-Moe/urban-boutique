@@ -82,7 +82,7 @@ const Rooms = () => {
           <Slider {...settings}>
             {roomsData.map((room, index) => (
               <div key={index} className="px-2">
-                <div className="bg-cream border border-choco rounded-lg overflow-hidden h-full flex flex-col min-h-[400px]">
+                <div className="bg-cream border border-choco rounded-lg shadow-xl  overflow-hidden h-full flex flex-col min-h-[400px]">
                   {/* Image Section */}
                   <img
                     src={room.image}

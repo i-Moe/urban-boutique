@@ -32,12 +32,12 @@ const Gallery = () => {
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="overflow-hidden cursor-pointer"
+              className="cursor-pointer"
             >
               <img
                 src={image}
                 alt={`Room ${index + 1}`}
-                className="object-cover w-full h-40 hover:scale-105 transition-transform duration-300"
+                className="object-cover w-full h-40 hover:scale-105 transition-transform duration-300 shadow-md"
               />
             </div>
           ))}
