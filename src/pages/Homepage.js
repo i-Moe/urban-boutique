@@ -14,7 +14,7 @@ const Homepage = () => {
       <About />
       <Rooms />
       <Gallery />
-      <Blog />
+      {/* <Blog /> */}
       <Contact />
     </main>
   );
