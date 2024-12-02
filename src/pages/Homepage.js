@@ -1,10 +1,11 @@
 // components/Homepage.js
 import React from 'react';
-import Hero from '../sections/Hero';      // Import your Hero section component
-import About from '../sections/About';    // Import your About section component
-import Rooms from '../sections/Rooms';   // Import your Services section component
-import Gallery from '../sections/Gallery'; // Import your Portfolio section component
-import Contact from '../sections/Contact';     // Import your Contact section component
+import Hero from '../sections/Hero';      
+import About from '../sections/About';    
+import Rooms from '../sections/Rooms';   
+import Gallery from '../sections/Gallery'; 
+import Blog from '../sections/BlogContent';
+import Contact from '../sections/Contact';     
 
 const Homepage = () => {
   return (
@@ -13,6 +14,7 @@ const Homepage = () => {
       <About />
       <Rooms />
       <Gallery />
+      <Blog />
       <Contact />
     </main>
   );
