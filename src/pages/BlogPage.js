@@ -3,11 +3,11 @@ import BlogHeader from "../blogcomponents/BlogHeader";
 import BlogContent from "../blogcomponents/BlogContent";
 import BlogSideBar from "../blogcomponents/BlogSideBar";
 import BlogFooter from "../blogcomponents/BlogFooter";
-import BlogSEO from "../blogcomponents/BlogSEO";
+import BlogSEO from "../blogcomponents/BlogSEO"; // Importe o BlogSEO
 
 const BlogPage = ({ article }) => {
   // Configurando os dados dinâmicos para SEO
-  const articleUrl = `http://seusite.com/blog/${article.id}`;
+  const articleUrl = `https://urban-boutique.vercel.app/blog/${article.id}`;
   const articleImage = article.image || "/assets/images/default-article.jpg"; // Substitua pelo caminho da imagem padrão
 
   return (

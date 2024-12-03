@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import { bubble as Menu } from 'react-burger-menu';
+import { Link } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import '../index.css';
 
@@ -14,8 +14,8 @@ const Navbar = () => {
         setIsOpen(false);
     };
 
-     // Close the dropdown menu when scrolling
-     useEffect(() => {
+    // Close the dropdown menu when scrolling
+    useEffect(() => {
         const handleScroll = () => {
             if (isOpen) {
                 closeMenu();
@@ -30,17 +30,17 @@ const Navbar = () => {
         };
     }, [isOpen]);
 
-
     return (
         <header className="bg-cream text-choco border-b border-choco sticky top-0 z-50">
             <div className="container-max-w-5xl bg-cream flex justify-between items-center h-16 relative">
                 {/* Logo */}
-                <div
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-2xl font-bold cat-cursor"
-        >
-          Urban Boutique Hotel
-        </div>
+                <Link
+                    to="/"
+                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                    className="text-2xl font-bold cat-cursor"
+                >
+                    Urban Boutique Hotel
+                </Link>
 
                 {/* Hamburger Menu (Mobile) */}
                 <div className="sm:hidden">
@@ -58,40 +58,27 @@ const Navbar = () => {
                 </nav>
             </div>
 
- {/* Dropdown Menu (Mobile) */}
-<div
-    className={`absolute top-0 left-0 w-full z-[-10] bg-choco border-b border-choco transition-transform duration-300 ease-in-out transform ${
-        isOpen ? 'translate-y-0' : '-translate-y-full'
-    }`}
->
-    <nav className="flex flex-col items-center pt-20 pb-5">
-        <a
-            href="#about"
-            className={`block px-4 py-2 text-cream w-full text-center transform transition duration-300 hover:text-cream`}
-        >
-            About
-        </a>
-        <a
-            href="#rooms"
-            className={`block px-4 py-2 text-cream w-full text-center transform transition duration-300 hover:text-cream`}
-        >
-            Rooms
-        </a>
-        <a
-            href="#gallery"
-            className={`block px-4 py-2 text-cream w-full text-center transform transition duration-300 hover:text-cream`}
-        >
-            Gallery
-        </a>
-        <a
-            href="#contact"
-            className={`block px-4 py-2 text-cream w-full text-center transform transition duration-300 hover:text-cream`}
-        >
-            Contact
-        </a>
-    </nav>
-</div>
-
+            {/* Dropdown Menu (Mobile) */}
+            <div
+                className={`absolute top-0 left-0 w-full z-[-10] bg-choco border-b border-choco transition-transform duration-300 ease-in-out transform ${
+                    isOpen ? 'translate-y-0' : '-translate-y-full'
+                }`}
+            >
+                <nav className="flex flex-col items-center pt-20 pb-5">
+                    <a href="#about" className="block px-4 py-2 text-cream w-full text-center hover:text-cream">
+                        About
+                    </a>
+                    <a href="#rooms" className="block px-4 py-2 text-cream w-full text-center hover:text-cream">
+                        Rooms
+                    </a>
+                    <a href="#gallery" className="block px-4 py-2 text-cream w-full text-center hover:text-cream">
+                        Gallery
+                    </a>
+                    <a href="#contact" className="block px-4 py-2 text-cream w-full text-center hover:text-cream">
+                        Contact
+                    </a>
+                </nav>
+            </div>
         </header>
     );
 };

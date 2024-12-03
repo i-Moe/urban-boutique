@@ -6,22 +6,22 @@ const BlogSEO = ({ title, description, image, url, author, date }) => {
     <Helmet>
       {/* Título da página */}
       <title>{title}</title>
+      {/* Meta description */}
       <meta name="description" content={description} />
-      
-      {/* Open Graph (Facebook, LinkedIn, etc.) */}
+      {/* Canonical */}
+      <link rel="canonical" href={url} />
+      {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content="article" />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
+      {/* Twitter */}
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      
-      {/* Schema.org JSON-LD */}
+      <meta name="twitter:card" content="summary_large_image" />
+      {/* Dados estruturados (Schema.org) */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -29,16 +29,9 @@ const BlogSEO = ({ title, description, image, url, author, date }) => {
           headline: title,
           description: description,
           image: image,
-          url: url,
-          author: {
-            "@type": "Person",
-            name: author,
-          },
+          author: { "@type": "Person", name: author },
           datePublished: date,
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": url,
-          },
+          mainEntityOfPage: { "@type": "WebPage", "@id": url },
         })}
       </script>
     </Helmet>

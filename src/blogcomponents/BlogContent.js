@@ -2,27 +2,31 @@ import React from "react";
 
 const BlogContent = ({ content }) => {
   return (
-    <section className="prose lg:prose-xl mx-auto my-8">
+    <div className="prose prose-lg max-w-none">
       {content.map((block, index) => {
-        if (block.type === "heading") {
-          return <h2 key={index} className="font-bold text-2xl">{block.text}</h2>;
+        switch (block.type) {
+          case "heading":
+            return block.level === 2 ? (
+              <h2 key={index} className="text-2xl font-bold mt-8">{block.text}</h2>
+            ) : (
+              <h3 key={index} className="text-xl font-semibold mt-6">{block.text}</h3>
+            );
+          case "paragraph":
+            return <p key={index} className="mt-4 leading-relaxed">{block.text}</p>;
+          case "image":
+            return (
+              <img
+                key={index}
+                src={block.src}
+                alt={block.alt}
+                className="w-full my-8 rounded-lg shadow-md"
+              />
+            );
+          default:
+            return null;
         }
-        if (block.type === "paragraph") {
-          return <p key={index} className="text-lg leading-7">{block.text}</p>;
-        }
-        if (block.type === "image") {
-          return (
-            <img
-              key={index}
-              src={block.src}
-              alt={block.alt}
-              className="my-4 rounded-lg shadow-lg"
-            />
-          );
-        }
-        return null;
       })}
-    </section>
+    </div>
   );
 };
 
