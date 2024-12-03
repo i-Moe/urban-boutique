@@ -1,6 +1,9 @@
 {
   "short_name": "Urban Boutique",
   "name": "Urban Boutique Hotel in Prishtina, Kosovo",
+  "description": "Urban Boutique Hotel in Prishtina offers a unique stay with modern amenities, exceptional service, and an informative blog about Prishtina's attractions.",
+  "lang": "en",
+  "dir": "ltr",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,6 +21,7 @@
       "sizes": "512x512"
     }
   ],
+  "categories": ["travel", "hospitality", "blog"],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#028e87",
