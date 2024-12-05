@@ -3,7 +3,7 @@ import React from "react";
 const BlogHeader = ({ title, subtitle, author, date, category }) => {
   const formatDate = (isoDate) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
-    return new Date(isoDate).toLocaleDateString("pt-BR", options);
+    return new Date(isoDate).toLocaleDateString("en-US", options);
   };
 
   return (

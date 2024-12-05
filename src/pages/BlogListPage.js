@@ -28,7 +28,7 @@ const BlogListPage = () => {
               to={`/blog/${article.id}`}
               className="text-vitamin hover:underline mt-4 inline-block"
             >
-              Leia mais
+              Read more
             </Link>
           </div>
         ))}
