@@ -22,7 +22,7 @@ const BlogPage = ({ article }) => {
         date={article.date}
       />
 
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container-max-w-5xl">
         {/* Cabeçalho */}
         <BlogHeader
           title={article.title}
@@ -31,14 +31,28 @@ const BlogPage = ({ article }) => {
           date={article.date}
           category={article.category}
         />
+
         <div className="flex flex-col lg:flex-row mt-8">
-          {/* Conteúdo principal */}
+          {/* Main Content */}
           <main className="w-full lg:w-3/4">
             <BlogContent content={article.content} />
           </main>
-          {/* Barra lateral */}
-          <BlogSideBar relatedArticles={article.relatedArticles} />
+
+          {/* Sidebar */}
+          <aside className="w-full lg:w-1/4 lg:sticky lg:top-16 max-h-[calc(100vh-48px)] min-h-[200px] overflow-auto py-4 sm:p-4 lg:py-4 lg:pl-5">
+            <BlogSideBar relatedArticles={article.relatedArticles} />
+          </aside>
         </div>
+
+        {/* <div className="flex flex-col lg:flex-row mt-8"> */}
+        {/* Conteúdo principal */}
+        {/* <main className="w-full lg:w-3/4">
+            <BlogContent content={article.content} />
+          </main> */}
+        {/* Barra lateral */}
+        {/* <BlogSideBar relatedArticles={article.relatedArticles} />
+        </div> */}
+
         {/* Rodapé */}
         <BlogFooter />
       </div>

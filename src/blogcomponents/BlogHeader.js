@@ -14,7 +14,30 @@ const BlogHeader = ({ title, subtitle, author, date, category }) => {
         {/* Subtítulo do artigo */}
         <p className="mt-4 text-lg text-gray-600">{subtitle}</p>
         {/* Metadados */}
-        <div className="mt-6 flex justify-center space-x-4 text-sm text-gray-500">
+
+        <div className="mt-6 flex flex-col items-center space-y-2 text-sm text-gray-500 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0">
+          <span className="before:content-['•'] before:mr-1 after:content-['•'] after:ml-1 sm:before:content-none sm:after:content-none">
+            <a
+              href={`/blog/author/${author.toLowerCase().replace(" ", "-")}`}
+              className="hover:underline"
+            >
+              {`By ${author}`}
+            </a>
+          </span>
+          <span className="before:content-['•'] before:mr-1 after:content-['•'] after:ml-1 sm:before:content-none sm:after:content-none">
+            {formatDate(date)}
+          </span>
+          <span className="before:content-['•'] before:mr-1 after:content-['•'] after:ml-1 sm:before:content-none sm:after:content-none">
+            <a
+              href={`/blog/category/${category.toLowerCase()}`}
+              className="text-blue-500 hover:underline"
+            >
+              {category}
+            </a>
+          </span>
+        </div>
+
+        {/* <div className="mt-6 flex justify-center space-x-4 text-sm text-gray-500">
           <span>
             <a href={`/blog/author/${author.toLowerCase().replace(" ", "-")}`} className="hover:underline">
               {`By ${author}`}
@@ -28,7 +51,7 @@ const BlogHeader = ({ title, subtitle, author, date, category }) => {
               {category}
             </a>
           </span>
-        </div>
+        </div> */}
       </div>
     </header>
   );
