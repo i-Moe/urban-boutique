@@ -9,7 +9,10 @@ const BlogListPage = () => {
   // Cálculos de Paginação
   const indexOfLastArticle = currentPage * articlesPerPage;
   const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
-  const currentArticles = articles.slice(indexOfFirstArticle, indexOfLastArticle); // Artigos da página atual
+  const currentArticles = articles.slice(
+    indexOfFirstArticle,
+    indexOfLastArticle
+  ); // Artigos da página atual
 
   const totalPages = Math.ceil(articles.length / articlesPerPage); // Número total de páginas
 
@@ -21,7 +24,15 @@ const BlogListPage = () => {
       <h1 className="text-4xl font-bold text-center my-8">Blog</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {currentArticles.map((article) => (
-          <div key={article.id} className="p-4 border rounded shadow-lg">
+          <div
+            key={article.id}
+            className="bg-white border border-choco p-4 rounded-lg shadow-lg"
+          >
+            <img
+              src={article.image}
+              alt={article.title}
+              className="w-full h-44 mb-5 object-cover rounded-md"
+            />
             <h2 className="text-xl font-bold">{article.title}</h2>
             <p className="mt-2 text-gray-600">{article.subtitle}</p>
             <Link
@@ -41,7 +52,9 @@ const BlogListPage = () => {
             key={index + 1}
             onClick={() => paginate(index + 1)}
             className={`px-4 py-2 rounded ${
-              currentPage === index + 1 ? "bg-vitamin text-white" : "bg-gray-200"
+              currentPage === index + 1
+                ? "bg-vitamin text-white"
+                : "bg-gray-200"
             }`}
           >
             {index + 1}

@@ -16,6 +16,7 @@ html {
 body {
   @apply font-sans; /* This applies the font globally */
   @apply text-choco; /* This applies the text color globally */
+  @apply bg-cream;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
