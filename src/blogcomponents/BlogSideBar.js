@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const BlogSideBar = ({ relatedArticles }) => {
   return (
-    <aside className="w-full lg:w-1/4 bg-gray-100 rounded-lg shadow-lg p-4">
+    <aside className="w-full bg-gray-100 border border-choco rounded-lg shadow-lg p-4">
       <h3 className="text-xl font-bold mb-4">Related Articles</h3>
       <ul>
         {relatedArticles.map((article, index) => (
