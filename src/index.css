@@ -8,9 +8,9 @@ html {
   scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
-html, body {
+/* html, body {
   @apply overflow-x-hidden;
-}
+} */
 
 
 body {
@@ -46,4 +46,8 @@ code {
 
 .slick-track {
   padding-bottom: 40px;
+}
+
+#rooms {
+  @apply overflow-x-hidden;
 }
