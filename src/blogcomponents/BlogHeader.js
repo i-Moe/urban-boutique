@@ -24,9 +24,11 @@ const BlogHeader = ({ title, subtitle, author, date, category }) => {
               {`By ${author}`}
             </a>
           </span>
+          <span className="hidden sm:inline text-vitamin">•</span>
           <span className="before:content-['•'] before:mr-1 after:content-['•'] after:ml-1 sm:before:content-none sm:after:content-none">
             {formatDate(date)}
           </span>
+          <span className="hidden sm:inline text-vitamin">•</span>
           <span className="before:content-['•'] before:mr-1 after:content-['•'] after:ml-1 sm:before:content-none sm:after:content-none">
             <a
               href={`/blog/category/${category.toLowerCase()}`}
