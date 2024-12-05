@@ -10,6 +10,7 @@ const article1 = {
   author: "Urban Boutique Team",
   date: "2024-12-03",
   category: "Tourism",
+  image: pristinaMain,
   content: [
     {
       type: "heading",

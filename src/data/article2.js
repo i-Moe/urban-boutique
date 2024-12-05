@@ -10,6 +10,7 @@ const article2 = {
     "author": "Urban Boutique Team",
     "date": "2024-12-03",
     "category": "Turismo",
+    "image": foodImage,
     "content": [
         {
             "type": "heading",
