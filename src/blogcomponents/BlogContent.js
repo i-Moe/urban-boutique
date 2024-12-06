@@ -2,7 +2,7 @@ import React from "react";
 
 const BlogContent = ({ content }) => {
   return (
-    <div className="prose prose-lg max-w-none">
+    <div className="prose prose-lg max-w-none px-3">
       {content.map((block, index) => {
         switch (block.type) {
           case "heading":

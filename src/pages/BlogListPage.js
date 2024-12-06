@@ -37,7 +37,7 @@ const BlogListPage = () => {
             <p className="mt-2 text-gray-600">{article.subtitle}</p>
             <Link
               to={`/blog/${article.id}`}
-              className="text-vitamin hover:underline mt-4 inline-block"
+              className="text-vitamin font-bold hover:underline mt-4 inline-block"
             >
               Read more
             </Link>
