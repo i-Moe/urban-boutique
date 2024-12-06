@@ -32,12 +32,12 @@ const Navbar = () => {
 
     return (
         <header className="bg-cream text-choco border-b border-choco sticky top-0 z-50">
-            <div className="container-max-w-5xl bg-cream flex justify-between items-center h-16 relative">
+            <div className="container-max-w-5xl bg-cream pt-1 flex justify-between items-center h-14 relative">
                 {/* Logo */}
                 <Link
                     to="/"
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                    className="text-2xl font-bold cat-cursor"
+                    className="text-xl lg:text-2xl font-bold"
                 >
                     Urban Boutique Hotel
                 </Link>
@@ -51,30 +51,30 @@ const Navbar = () => {
 
                 {/* Menu (Desktop) */}
                 <nav className="hidden sm:flex space-x-6">
-                    <a href="#about" className="hover:text-mint">About</a>
-                    <a href="#rooms" className="hover:text-mint">Rooms</a>
-                    <a href="#gallery" className="hover:text-mint">Gallery</a>
-                    <a href="#contact" className="hover:text-mint">Contact</a>
+                    <a href="#about" className="text-lg hover:text-mint">About</a>
+                    <a href="#rooms" className="text-lg hover:text-mint">Rooms</a>
+                    <a href="#gallery" className="text-lg hover:text-mint">Gallery</a>
+                    <a href="#contact" className="text-lg hover:text-mint">Contact</a>
                 </nav>
             </div>
 
             {/* Dropdown Menu (Mobile) */}
             <div
-                className={`absolute top-0 left-0 w-full z-[-10] bg-choco border-b border-choco transition-transform duration-300 ease-in-out transform ${
+                className={`absolute top-0 left-0 w-full z-[-10] bg-choco shadow-md border-b border-choco transition-transform duration-300 ease-in-out transform ${
                     isOpen ? 'translate-y-0' : '-translate-y-full'
                 }`}
             >
                 <nav className="flex flex-col items-center pt-20 pb-5">
-                    <a href="#about" className="block px-4 py-2 text-cream w-full text-center hover:text-cream">
+                    <a href="#about" className="block px-4 py-2 text-cream text-lg w-full text-center hover:text-cream">
                         About
                     </a>
-                    <a href="#rooms" className="block px-4 py-2 text-cream w-full text-center hover:text-cream">
+                    <a href="#rooms" className="block px-4 py-2 text-cream text-lg w-full text-center hover:text-cream">
                         Rooms
                     </a>
-                    <a href="#gallery" className="block px-4 py-2 text-cream w-full text-center hover:text-cream">
+                    <a href="#gallery" className="block px-4 py-2 text-cream text-lg w-full text-center hover:text-cream">
                         Gallery
                     </a>
-                    <a href="#contact" className="block px-4 py-2 text-cream w-full text-center hover:text-cream">
+                    <a href="#contact" className="block px-4 py-2 text-cream text-lg w-full text-center hover:text-cream">
                         Contact
                     </a>
                 </nav>

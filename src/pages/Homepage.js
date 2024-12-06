@@ -5,6 +5,7 @@ import About from '../sections/About';
 import Rooms from '../sections/Rooms';   
 import Gallery from '../sections/Gallery'; 
 import Blog from '../sections/BlogContent';
+import Reviews from '../sections/Reviews';
 import Contact from '../sections/Contact';     
 
 const Homepage = () => {
@@ -15,6 +16,7 @@ const Homepage = () => {
       <Rooms />
       <Gallery />
       {/* <Blog /> */}
+      <Reviews />
       <Contact />
     </main>
   );

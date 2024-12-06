@@ -8,7 +8,7 @@ const BlogHeader = ({ title, subtitle, author, date, category }) => {
 
   return (
     <header className="py-10 bg-cream border-b border-choco text-center">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-3">
         {/* Título do artigo */}
         <h1 className="text-4xl font-bold text-choco">{title}</h1>
         {/* Subtítulo do artigo */}

@@ -52,3 +52,10 @@ code {
 #rooms {
   @apply overflow-x-hidden;
 }
+
+.swiper-slide {
+  @apply shadow-lg;
+  @apply m-5;
+  @apply rounded-lg;
+}
+
