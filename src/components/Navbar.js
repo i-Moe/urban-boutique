@@ -31,8 +31,8 @@ const Navbar = () => {
     }, [isOpen]);
 
     return (
-        <header className="bg-cream text-choco border-b border-choco sticky top-0 z-50">
-            <div className="container-max-w-5xl bg-cream pt-1 flex justify-between items-center h-14 relative">
+        <header className="bg-cream text-choco border-b-[0.7px] sm:border-b border-choco sticky top-0 z-50 h-full">
+            <div className="container-max-w-5xl bg-cream pt-1 flex justify-between items-center relative h-11 sm:h-14">
                 {/* Logo */}
                 <Link
                     to="/"
@@ -60,7 +60,7 @@ const Navbar = () => {
 
             {/* Dropdown Menu (Mobile) */}
             <div
-                className={`absolute top-0 left-0 w-full z-[-10] bg-choco shadow-md border-b border-choco transition-transform duration-300 ease-in-out transform ${
+                className={`absolute top-0 left-0 w-full z-[-10] bg-choco transition-transform duration-300 ease-in-out transform ${
                     isOpen ? 'translate-y-0' : '-translate-y-full'
                 }`}
             >
