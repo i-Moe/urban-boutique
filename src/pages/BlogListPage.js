@@ -36,11 +36,18 @@ const BlogListPage = () => {
             <h2 className="text-xl font-bold">{article.title}</h2>
             <p className="mt-2 text-gray-600">{article.subtitle}</p>
             <Link
-              to={`/blog/${article.id}`}
-              className="text-vitamin font-bold hover:underline mt-4 inline-block"
-            >
-              Read more
-            </Link>
+            to={`/blog/${article.id}`}
+            className="text-vitamin font-bold mt-4 inline-block relative group"
+        >
+            <span className="inline-block">
+                Read more
+                <span className="ml-2 inline-block transition-transform duration-300 transform group-hover:translate-x-1">&rarr;</span>
+            </span>
+            <span
+                className="absolute left-0 bottom-[-1px] w-0 h-[0.8px] bg-vitamin transition-all duration-300 group-hover:w-full"
+                style={{ transformOrigin: 'left' }}
+            ></span>
+        </Link>
           </div>
         ))}
       </div>

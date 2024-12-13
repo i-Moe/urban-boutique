@@ -16,12 +16,12 @@ const Reviews = () => {
   }, []);
 
   return (
-    <section id="reviews" className="py-24 sm:pb-40 relative">
+    <section id="reviews" className="py-16 bg-vitamin relative">
       <div className="container-max-w-5xl">
         <div
           className="elfsight-app-a39fd654-7e86-4693-b919-2d59295bd1ef"
           data-elfsight-app-lazy
-          style={{ width: "100%", height: "400px" }}
+          style={{ width: "100%", height: "100%" }}
           allowFullScreen
           loading="lazy"
         ></div>

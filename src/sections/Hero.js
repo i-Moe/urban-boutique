@@ -5,7 +5,7 @@ import FadeIn from "../components/FadeIn";
 const Hero = () => {
   return (
     <section
-      className="relative bg-cover bg-center min-h-[90vh] flex items-center justify-center py-10"
+      className="relative bg-cover bg-center min-h-[90vh] flex items-center justify-center py-14"
       style={{
         backgroundImage: `url(${roomImage})`, // Replace with your hotel's image URL
       }}
