@@ -16,7 +16,7 @@ const Reviews = () => {
   }, []);
 
   return (
-    <section id="reviews" className="py-16 bg-vitamin relative">
+    <section id="reviews" className="py-40 mt-[-150px] z-[-250]  relative">
       <div className="container-max-w-5xl">
         <div
           className="elfsight-app-a39fd654-7e86-4693-b919-2d59295bd1ef"

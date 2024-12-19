@@ -34,7 +34,7 @@ const Gallery = () => {
   return (
     <section
       id="gallery"
-      className="py-40 mt-[-150px] z-[-250] relative bg-cream"
+      className="pb-40 relative"
     >
       <div className="container-max-w-5xl">
         <FadeIn>

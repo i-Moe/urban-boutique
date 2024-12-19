@@ -4,7 +4,7 @@ import FadeIn from "../components/FadeIn";
 const Contact = () => {
   return (
     <section
-      className="pt-16 pb-36 bg-chillmint  relative  mb-[-110px] z-[-120]"
+      className="pt-16 pb-36 relative  mb-[-110px] z-[-120]"
       id="contact"
     >
       <div className="container-max-w-5xl">
@@ -13,7 +13,7 @@ const Contact = () => {
         </FadeIn>
         <FadeIn>
           <div className="flex flex-wrap mx-4">
-            <div className="bg-cream p-8 rounded-md border border-choco shadow-xl h-full flex flex-col md:flex-row md:space-x-8">
+            <div className="bg-lightcream p-8 rounded-md border border-choco shadow-xl h-full flex flex-col md:flex-row md:space-x-8">
               {/* Left Column: Contact Info */}
               <div className="md:w-1/2">
                 <h3 className="text-xl font-semibold mb-4">Get In Touch</h3>
