@@ -23,6 +23,7 @@ module.exports = {
       textShadow: {
         'default': '2px 2px 4px rgba(0, 0, 0, 0.25)', // Example shadow
         'choco': '3px 2px 1px theme("colors.choco")', // Shadow with choco color
+        'urban': '1px 1px 5px rgba(0, 0, 0, 0.3)',
       },
     },
   },

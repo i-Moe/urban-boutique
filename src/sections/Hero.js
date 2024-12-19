@@ -1,5 +1,5 @@
 import React from "react";
-import roomImage from "../assets/images/family2.jpg";
+import roomImage from "../assets/images/hero.jpg";
 import FadeIn from "../components/FadeIn";
 
 const Hero = () => {
@@ -10,16 +10,16 @@ const Hero = () => {
         backgroundImage: `url(${roomImage})`, // Replace with your hotel's image URL
       }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-45"></div>
       <div className="container mx-auto px-4 relative z-10 text-center sm:text-left text-lightcream">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center sm:items-start justify-between">
           <FadeIn>
             <div className="sm:w-3/5 mb-8">
-              <h1 className="text-3xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-shadow-urban">
                 Welcome to <br />
                 <span className="text-vitamin">Urban Boutique Hotel</span>
               </h1>
-              <p className="text-lg sm:text-xl leading-relaxed sm:pl-4">
+              <p className="text-lg sm:text-xl leading-relaxed sm:pl-4 text-shadow-urban">
                 Where luxury meets comfort. Discover your perfect stay in the
                 heart of the city with unmatched hospitality, exceptional
                 amenities, and an unforgettable experience.

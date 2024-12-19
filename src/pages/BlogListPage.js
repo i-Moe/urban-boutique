@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import articles from "../data/articles";
 
@@ -18,6 +18,17 @@ const BlogListPage = () => {
 
   // Alterar a página atual
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  useEffect(() => {
+    // Set background color when this page is rendered
+    document.body.style.backgroundColor = "#69adaa"; // Change to desired color
+
+    // Clean up the background color when leaving the page
+    return () => {
+      document.body.style.backgroundColor = ""; // Reset to default
+    };
+  }, []);
+
 
   return (
     <section>

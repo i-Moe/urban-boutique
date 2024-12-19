@@ -80,13 +80,8 @@ const article1 = {
   ],
   relatedArticles: [
     {
-      title: "5 Lugares Imperdíveis no Kosovo",
-      link: "/blog/5-lugares-imperdiveis",
-      image: pristinaLibrary, // Adicionando imagens aos artigos relacionados
-    },
-    {
-      title: "Descubra a Gastronomia Kosovar",
-      link: "/blog/gastronomia-kosovar",
+      title: "Discover the Hidden Treasures of Pristina",
+      link: "/blog/treasures-of-pristina",
       image: kosovoFood, // Adicionando imagens aos artigos relacionados
     },
   ],

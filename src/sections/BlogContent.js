@@ -1,30 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import articles from "../data/articles";
 
 const Blog = () => {
-  const [currentPage, setCurrentPage] = useState(1); // Página atual
-  const articlesPerPage = 5; // Quantidade de artigos por página
-
-  // Cálculos de Paginação
-  const indexOfLastArticle = currentPage * articlesPerPage;
-  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
-  const currentArticles = articles.slice(
-    indexOfFirstArticle,
-    indexOfLastArticle
-  ); // Artigos da página atual
-
-  const totalPages = Math.ceil(articles.length / articlesPerPage); // Número total de páginas
-
-  // Alterar a página atual
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const latestArticles = articles.reverse().slice(0, 3);
 
   return (
     <section id="blog" className="py-11 bg-chillmint">
       <div className="container-max-w-5xl">
         <h1 className="text-4xl font-bold text-center my-8">Blog</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {currentArticles.map((article) => (
+          {latestArticles.map((article) => (
             <div
               key={article.id}
               className="bg-lightcream border border-choco p-4 rounded-lg shadow-lg"
