@@ -18,6 +18,7 @@ module.exports = {
         mint: '#028e87',
         chillmint: '#69adaa',
         cream: '#f3e7d7',
+        lightcream:'#f7f2eb',
       },
       textShadow: {
         'default': '2px 2px 4px rgba(0, 0, 0, 0.25)', // Example shadow

@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import BlogNavbar from "./components/BlogNavbar";
 import Homepage from "./pages/Homepage";
