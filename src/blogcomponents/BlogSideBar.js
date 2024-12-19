@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const BlogSideBar = ({ relatedArticles }) => {
   return (
-    <aside className="w-full bg-gray-100 border border-choco rounded-lg shadow-lg p-4">
+    <aside className="w-full bg-lightcream border border-choco rounded-lg shadow-lg p-4">
       <h3 className="text-xl font-bold mb-4">Related Articles</h3>
       <ul>
         {relatedArticles.map((article, index) => (
@@ -13,7 +13,7 @@ const BlogSideBar = ({ relatedArticles }) => {
               alt={article.title}
               className="w-16 h-16 object-cover rounded-lg mr-4"
             />
-            <Link to={article.link} className="text-blue-500 hover:underline flex-1">
+            <Link to={article.link} className="text-mint hover:underline flex-1">
               {article.title}
             </Link>
           </li>

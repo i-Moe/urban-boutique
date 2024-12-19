@@ -5,13 +5,13 @@ import FadeIn from "../components/FadeIn";
 const Hero = () => {
   return (
     <section
-      className="relative bg-cover bg-center min-h-[90vh] flex items-center justify-center py-10"
+      className="relative bg-cover bg-center min-h-[90vh] flex items-center justify-center py-14"
       style={{
         backgroundImage: `url(${roomImage})`, // Replace with your hotel's image URL
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-      <div className="container mx-auto px-4 relative z-10 text-center sm:text-left text-white">
+      <div className="container mx-auto px-4 relative z-10 text-center sm:text-left text-lightcream">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center sm:items-start justify-between">
           <FadeIn>
             <div className="sm:w-3/5 mb-8">
@@ -27,13 +27,13 @@ const Hero = () => {
               <div className="flex flex-col sm:flex-row justify-center sm:justify-start sm:items-center mt-8 gap-4">
                 <a
                   href="#rooms"
-                  className="bg-vitamin text-white text-lg border border-vitamin px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-vitamin transition duration-300"
+                  className="bg-vitamin text-lightcream text-lg border border-vitamin px-6 py-3 rounded-full font-semibold hover:bg-lightcream hover:text-vitamin transition duration-300"
                 >
                   Explore Our Rooms
                 </a>
                 <a
                   href="#contact"
-                  className="bg-transparent text-white text-lg border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-vitamin transition duration-300 sm:ml-4"
+                  className="bg-transparent text-lightcream text-lg border border-lightcream px-6 py-3 rounded-full font-semibold hover:bg-lightcream hover:text-vitamin transition duration-300 sm:ml-4"
                 >
                   Contact Us
                 </a>

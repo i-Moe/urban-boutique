@@ -39,7 +39,7 @@ const BlogPage = ({ article }) => {
           </main>
 
           {/* Sidebar */}
-          <aside className="w-full lg:w-1/4 lg:sticky lg:top-16 max-h-[calc(100vh-48px)] min-h-[200px] overflow-auto py-4 sm:p-4 lg:py-4 lg:pl-5">
+          <aside className="w-full lg:w-1/4 lg:sticky lg:top-16 max-h-[calc(100vh-48px)] min-h-[200px] overflow-auto py-4 mt-8 lg:mt-0 sm:p-4 lg:py-4 lg:pl-5">
             <BlogSideBar relatedArticles={article.relatedArticles} />
           </aside>
         </div>

@@ -1,70 +1,88 @@
-import React from "react";
-import balconyImage from "../assets/images/balcony.jpg"
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import articles from "../data/articles";
 
 const Blog = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Exploring the Best of Our City",
-      excerpt: "Discover the must-visit spots near our hotel for an unforgettable stay.",
-      image: balconyImage,
-    },
-    {
-      id: 2,
-      title: "Relax and Unwind at Our Spa",
-      excerpt: "Experience ultimate relaxation with our exclusive spa packages.",
-      image: balconyImage,
-    },
-    {
-      id: 3,
-      title: "Local Culinary Delights",
-      excerpt: "A guide to the finest dining experiences in the neighborhood.",
-      image: balconyImage,
-    },
-  ];
+  const [currentPage, setCurrentPage] = useState(1); // Página atual
+  const articlesPerPage = 5; // Quantidade de artigos por página
+
+  // Cálculos de Paginação
+  const indexOfLastArticle = currentPage * articlesPerPage;
+  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
+  const currentArticles = articles.slice(
+    indexOfFirstArticle,
+    indexOfLastArticle
+  ); // Artigos da página atual
+
+  const totalPages = Math.ceil(articles.length / articlesPerPage); // Número total de páginas
+
+  // Alterar a página atual
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <section id="blog" className="py-24 bg-cream">
-      <div className="container mx-auto max-w-5xl px-6">
-        {/* Section Title */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
-            Hotel Blog
-          </h2>
-          <p className="text-gray-600 mt-4">
-            Stay updated with the latest news, tips, and experiences from our hotel.
-          </p>
-        </div>
-
-        {/* Blog Posts Grid */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post) => (
+    <section id="blog" className="py-11 bg-chillmint">
+      <div className="container-max-w-5xl">
+        <h1 className="text-4xl font-bold text-center my-8">Blog</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {currentArticles.map((article) => (
             <div
-              key={post.id}
-              className="bg-white shadow-md rounded-lg overflow-hidden"
+              key={article.id}
+              className="bg-lightcream border border-choco p-4 rounded-lg shadow-lg"
             >
-              {/* Blog Post Image */}
               <img
-                src={post.image}
-                alt={post.title}
-                className="h-48 w-full object-cover"
+                src={article.image}
+                alt={article.title}
+                className="w-full h-44 mb-5 object-cover rounded-md"
               />
-              {/* Blog Post Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800">
-                  {post.title}
-                </h3>
-                <p className="text-gray-600 mt-2">{post.excerpt}</p>
-                <a
-                  href="#"
-                  className="inline-block mt-4 text-orange-500 font-medium hover:underline"
-                >
-                  Read More →
-                </a>
-              </div>
+              <h2 className="text-xl font-bold">{article.title}</h2>
+              <p className="mt-2 text-gray-600">{article.subtitle}</p>
+              <Link
+                to={`/blog/${article.id}`}
+                className="text-vitamin font-bold mt-4 inline-block relative group"
+              >
+                <span className="inline-block">
+                  Read more
+                  <span className="ml-2 inline-block transition-transform duration-300 transform group-hover:translate-x-1">
+                    &rarr;
+                  </span>
+                </span>
+                <span
+                  className="absolute left-0 bottom-[-1px] w-0 h-[0.8px] bg-vitamin transition-all duration-300 group-hover:w-full"
+                  style={{ transformOrigin: "left" }}
+                ></span>
+              </Link>
             </div>
           ))}
         </div>
+
+        <div className="flex justify-center mt-8 space-x-2">
+          <a
+            href="/blog"
+            className="text-lightcream text-lg border border-ligtcream shadow-md px-6 py-3 rounded-full font-semibold hover:bg-lightcream hover:text-chillmint transition duration-300"
+          >
+            Check more articles
+            <span className="ml-2 inline-block transition-transform duration-300 transform hover:translate-x-1">
+                    &rarr;
+                  </span>
+          </a>
+        </div>
+
+        {/* Paginação */}
+        {/* <div className="flex justify-center mt-8 space-x-2">
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index + 1}
+            onClick={() => paginate(index + 1)}
+            className={`px-4 py-2 rounded ${
+              currentPage === index + 1
+                ? "bg-vitamin text-white"
+                : "bg-gray-200"
+            }`}
+          >
+            {index + 1}
+          </button>
+        ))}
+      </div> */}
       </div>
     </section>
   );
