@@ -1,5 +1,6 @@
 import React from "react";
-import roomImage from "../assets/images/hero.jpg";
+import roomImageDesktop from "../assets/images/hero1200w.webp";
+import roomImageMobile from "../assets/images/hero800w.webp";
 import FadeIn from "../components/FadeIn";
 
 const Hero = () => {
@@ -7,8 +8,12 @@ const Hero = () => {
     <section
       className="relative bg-cover bg-center min-h-[90vh] flex items-center justify-center py-14"
       style={{
-        backgroundImage: `url(${roomImage})`, // Replace with your hotel's image URL
+        backgroundImage: `url(${window.innerWidth > 768 ? roomImageDesktop : roomImageMobile})`, 
       }}
+      
+      // style={{
+      //   backgroundImage: `url(${roomImage})`, // Replace with your hotel's image URL
+      // }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-45"></div>
       <div className="container mx-auto px-4 relative z-10 text-center sm:text-left text-lightcream">
@@ -44,20 +49,6 @@ const Hero = () => {
       </div>
     </section>
 
-    // <img
-    //   src={HalfMoonDivider}
-    //   alt="Half Moon divider"
-    //   className="block w-full
-
-    //   relative mt-[-3px]
-    //     h-[40px] sm:h-[60px] lg:h-[100px]"
-    // />
-
-    /* <img
-        src={WavyDivider}
-        alt="Wavy divider"
-        className="block w-full mt-[-3px]"
-      /> */
   );
 };
 

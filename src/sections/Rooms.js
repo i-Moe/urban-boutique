@@ -88,6 +88,7 @@ const Rooms = () => {
                     src={room.image}
                     alt={room.title}
                     className="w-full h-48 object-cover rounded-t-lg"
+                    loading="lazy"
                   />
                   {/* Content Section */}
                   <div className="p-4 text-left flex-grow flex flex-col">

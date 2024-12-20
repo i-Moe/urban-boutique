@@ -14,6 +14,7 @@ const article2 = {
   content: [
     {
       type: "heading",
+      level: 2,
       text: "Introduction",
     },
     {
@@ -31,6 +32,7 @@ const article2 = {
     },
     {
       type: "heading",
+      level: 2,
       text: "History of Pristina",
     },
     {
@@ -49,6 +51,7 @@ const article2 = {
     },
     {
       type: "heading",
+      level: 2,
       text: "Main Tourist Attractions",
     },
     {
@@ -68,6 +71,7 @@ const article2 = {
     },
     {
       type: "heading",
+      level: 2,
       text: "Culture and Gastronomy",
     },
     {
@@ -81,6 +85,7 @@ const article2 = {
     },
     {
       type: "heading",
+      level: 2,
       text: "Travel Tips and Best Time to Visit",
     },
     {
@@ -98,6 +103,7 @@ const article2 = {
     },
     {
       type: "heading",
+      level: 2,
       text: "Where to Stay",
     },
     {
@@ -111,6 +117,7 @@ const article2 = {
     },
     {
       type: "heading",
+      level: 2,
       text: "Conclusion",
     },
     {

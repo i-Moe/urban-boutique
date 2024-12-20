@@ -13,7 +13,7 @@ const BlogSideBar = ({ relatedArticles }) => {
               alt={article.title}
               className="w-16 h-16 object-cover rounded-lg mr-4"
             />
-            <Link to={article.link} className="text-mint hover:underline flex-1">
+            <Link to={article.link} className="text-mint hover:underline decoration-[0.8px] underline-offset-4 flex-1">
               {article.title}
             </Link>
           </li>
