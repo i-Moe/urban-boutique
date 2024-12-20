@@ -14,6 +14,7 @@ const Hero = () => {
       // style={{
       //   backgroundImage: `url(${roomImage})`, // Replace with your hotel's image URL
       // }}
+      loading="eager"
     >
       <div className="absolute inset-0 bg-black bg-opacity-45"></div>
       <div className="container mx-auto px-4 relative z-10 text-center sm:text-left text-lightcream">
