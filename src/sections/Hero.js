@@ -1,55 +1,18 @@
-import React, { useEffect, useState } from "react";
-import roomImageWebP_1920 from "../assets/images/hero1920w.webp";
-import roomImageWebP_1200 from "../assets/images/hero1200w.webp";
-import roomImageWebP_800 from "../assets/images/hero800w.webp";
-import roomImageJPG_1920 from "../assets/images/hero1920w.jpg";
-import roomImageJPG_1200 from "../assets/images/hero1200w.jpg";
-import roomImageJPG_800 from "../assets/images/hero800w.jpg";
+import React from "react";
+import roomImageDesktop from "../assets/images/hero1200w.webp";
+import roomImageMobile from "../assets/images/hero800w.webp";
 import FadeIn from "../components/FadeIn";
 
 const Hero = () => {
-
-  const [supportsWebP, setSupportsWebP] = useState(false);
-
-  // Detect WebP support
-  useEffect(() => {
-    const testWebP = () => {
-      const canvas = document.createElement("canvas");
-      if (canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0) {
-        setSupportsWebP(true);
-      }
-    };
-    testWebP();
-  }, []);
-
-  // Set the background image based on format support
-  const backgroundImage = supportsWebP
-    ? `${roomImageWebP_1920}, ${roomImageWebP_1200}, ${roomImageWebP_800}`
-    : `${roomImageJPG_1920}, ${roomImageJPG_1200}, ${roomImageJPG_800}`;
-
-
-
-  // const [supportsWebP, setSupportsWebP] = useState(false);
-
-  // useEffect(() => {
-  //   const testWebP = () => {
-  //     const canvas = document.createElement("canvas");
-  //     if (canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0) {
-  //       setSupportsWebP(true);
-  //     }
-  //   };
-  //   testWebP();
-  // }, []);
-
   return (
     <section
       className="relative bg-cover bg-center min-h-[90vh] flex items-center justify-center py-14"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(${window.innerWidth > 768 ? roomImageDesktop : roomImageMobile})`, 
       }}
       
       // style={{
-      //   backgroundImage: `url(${supportsWebP ? roomImageWebP : roomImageJPG})`,
+      //   backgroundImage: `url(${roomImage})`, // Replace with your hotel's image URL
       // }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-45"></div>
@@ -84,23 +47,8 @@ const Hero = () => {
           </FadeIn>
         </div>
       </div>
-      
     </section>
 
-    // <img
-    //   src={HalfMoonDivider}
-    //   alt="Half Moon divider"
-    //   className="block w-full
-
-    //   relative mt-[-3px]
-    //     h-[40px] sm:h-[60px] lg:h-[100px]"
-    // />
-
-    /* <img
-        src={WavyDivider}
-        alt="Wavy divider"
-        className="block w-full mt-[-3px]"
-      /> */
   );
 };
 

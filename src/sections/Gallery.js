@@ -51,6 +51,7 @@ const Gallery = () => {
                 src={image}
                 alt={`Room ${index + 1}`}
                 className="w-full object-cover rounded-md hover:scale-105 transition-transform duration-300"
+                loading="lazy"
               />
             </div>
           ))}
