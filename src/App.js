@@ -8,12 +8,14 @@ import BlogPage from "./pages/BlogPage"; // Página do artigo individual
 import Footer from "./components/Footer";
 import BlogFooter from "./components/BlogFooter";
 import articles from "./data/articles"; // Dados dos artigos
+import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 import "./index.css";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         {/* Página inicial */}
         <Route

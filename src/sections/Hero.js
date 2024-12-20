@@ -1,14 +1,56 @@
-import React from "react";
-import roomImage from "../assets/images/hero.jpg";
+import React, { useEffect, useState } from "react";
+import roomImageWebP_1920 from "../assets/images/hero1920w.webp";
+import roomImageWebP_1200 from "../assets/images/hero1200w.webp";
+import roomImageWebP_800 from "../assets/images/hero800w.webp";
+import roomImageJPG_1920 from "../assets/images/hero1920w.jpg";
+import roomImageJPG_1200 from "../assets/images/hero1200w.jpg";
+import roomImageJPG_800 from "../assets/images/hero800w.jpg";
 import FadeIn from "../components/FadeIn";
 
 const Hero = () => {
+
+  const [supportsWebP, setSupportsWebP] = useState(false);
+
+  // Detect WebP support
+  useEffect(() => {
+    const testWebP = () => {
+      const canvas = document.createElement("canvas");
+      if (canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0) {
+        setSupportsWebP(true);
+      }
+    };
+    testWebP();
+  }, []);
+
+  // Set the background image based on format support
+  const backgroundImage = supportsWebP
+    ? `${roomImageWebP_1920}, ${roomImageWebP_1200}, ${roomImageWebP_800}`
+    : `${roomImageJPG_1920}, ${roomImageJPG_1200}, ${roomImageJPG_800}`;
+
+
+
+  // const [supportsWebP, setSupportsWebP] = useState(false);
+
+  // useEffect(() => {
+  //   const testWebP = () => {
+  //     const canvas = document.createElement("canvas");
+  //     if (canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0) {
+  //       setSupportsWebP(true);
+  //     }
+  //   };
+  //   testWebP();
+  // }, []);
+
   return (
     <section
       className="relative bg-cover bg-center min-h-[90vh] flex items-center justify-center py-14"
       style={{
-        backgroundImage: `url(${roomImage})`, // Replace with your hotel's image URL
+        backgroundImage: `url(${backgroundImage})`,
       }}
+      
+      // style={{
+      //   backgroundImage: `url(${supportsWebP ? roomImageWebP : roomImageJPG})`,
+      // }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-45"></div>
       <div className="container mx-auto px-4 relative z-10 text-center sm:text-left text-lightcream">
@@ -42,6 +84,7 @@ const Hero = () => {
           </FadeIn>
         </div>
       </div>
+      
     </section>
 
     // <img

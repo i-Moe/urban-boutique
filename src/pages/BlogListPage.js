@@ -40,12 +40,16 @@ const BlogListPage = () => {
               key={article.id}
               className="bg-lightcream border border-choco p-4 rounded-lg shadow-lg"
             >
+              <Link to={`/blog/${article.id}`}>
               <img
                 src={article.image}
                 alt={article.title}
                 className="w-full h-44 mb-5 object-cover rounded-md"
               />
-              <h2 className="text-xl font-bold">{article.title}</h2>
+              </Link>
+              <Link to={`/blog/${article.id}`}>
+              <h2 className="text-xl font-bold hover:underline decoration-choco decoration-[0.8px] underline-offset-4">{article.title}</h2>
+              </Link>
               <p className="mt-2 text-gray-600">{article.subtitle}</p>
               <Link
                 to={`/blog/${article.id}`}
