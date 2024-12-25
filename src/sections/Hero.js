@@ -33,13 +33,13 @@ const Hero = () => {
               <div className="flex flex-col sm:flex-row justify-center sm:justify-start sm:items-center mt-8 gap-4">
                 <a
                   href="#rooms"
-                  className="bg-vitamin text-lightcream text-lg border border-vitamin px-6 py-3 rounded-full font-semibold hover:bg-lightcream hover:text-vitamin transition duration-300"
+                  className="bg-vitamin shadow-md text-lightcream text-lg border border-vitamin px-6 py-3 rounded-full font-semibold hover:bg-lightcream hover:text-vitamin transition duration-300"
                 >
                   Explore Our Rooms
                 </a>
                 <a
                   href="#contact"
-                  className="bg-transparent text-lightcream text-lg border border-lightcream px-6 py-3 rounded-full font-semibold hover:bg-lightcream hover:text-vitamin transition duration-300 sm:ml-4"
+                  className="bg-transparent shadow-md text-lightcream text-lg border border-lightcream px-6 py-3 rounded-full font-semibold hover:bg-lightcream hover:text-vitamin transition duration-300 sm:ml-4"
                 >
                   Contact Us
                 </a>

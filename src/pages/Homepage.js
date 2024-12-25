@@ -6,7 +6,8 @@ import Rooms from '../sections/Rooms';
 import Gallery from '../sections/Gallery'; 
 import Blog from '../sections/BlogSection';
 import Reviews from '../sections/Reviews';
-import Contact from '../sections/Contact';     
+import Contact from '../sections/Contact'; 
+import WhatsAppButton from '../components/WhatsAppButton'    
 
 const Homepage = () => {
   return (
@@ -18,6 +19,7 @@ const Homepage = () => {
       <Gallery />  
       <Blog />    
       <Contact />
+      <WhatsAppButton />
     </main>
   );
 };
