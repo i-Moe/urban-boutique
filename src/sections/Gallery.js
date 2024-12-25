@@ -19,6 +19,9 @@ import stairsImage from "../assets/images/stairs.jpg";
 import lampImage from "../assets/images/lamp.jpg";
 import lampsImage2 from "../assets/images/3lamps.jpg";
 import paintImage from "../assets/images/paint.jpg";
+import plantImage from "../assets/images/Copy of plant.jpg";
+import room1BalconyImage from "../assets/images/Copy of Copy of IMG_5526.jpg";
+import room4TableImage from "../assets/images/Copy of Copy of IMG_5732.jpg";
 
 const galleryImages = [
   balconyImage,
@@ -40,6 +43,9 @@ const galleryImages = [
   lampImage,
   stairsImage,
   room1Image,
+  plantImage,
+  room1BalconyImage,
+  room4TableImage
 ];
 
 const Gallery = () => {
