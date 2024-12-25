@@ -1,51 +1,52 @@
 import React from "react";
 import FadeIn from "../components/FadeIn";
-import balconyImage from "../assets/images/balcony.jpg";
-// import budgetRoomImage from "../assets/images/room1.jpg";
-import deluxeRoomImage from "../assets/images/deluxe.jpg";
-// import doubleRoomImage from "../assets/images/room2.jpg";
-import doubleRoomImage2 from "../assets/images/Copy of Copy of IMG_5644.jpg";
-import doubleRoomImage3 from "../assets/images/double3.jpg";
+
+import room1Image from "../assets/images/room1.png";
+import room1Image2 from "../assets/images/room111.jpg";
+import room1BalconyImage from "../assets/images/room1Balcony.jpg";
+
+import room2Image from "../assets/images/room2.png";
+import room2Image2 from "../assets/images/room2Overview.jpg";
 import eyeImage from "../assets/images/paintingOfEye.jpg";
+import room2CouchImage from "../assets/images/room2Couch.jpg";
 import spaBathImage from "../assets/images/spaBath.jpg";
 import chairsImage from "../assets/images/twoChairs.jpg";
-import chairsImage2 from "../assets/images/twoChairs2.jpg";
-import familyRoomImage from "../assets/images/familyNew.jpg";
-import familyRoomImage2 from "../assets/images/Copy of Copy of IMG_5734.jpg";
-import doorImage from "../assets/images/corriidor.png";
-import libraryImage from "../assets/images/libraryyy.jpg";
-import room1Image from "../assets/images/room111.jpg";
+
+import room4Image from "../assets/images/familyNew.jpg";
+import room4Image2 from "../assets/images/room4Chairs.jpg";
+import room4TableImage from "../assets/images/room4Table.jpg";
+
+import doorImage from "../assets/images/hotelCorridor.png";
+import libraryImage from "../assets/images/library.jpg";
 import stairsImage from "../assets/images/stairs.jpg";
 import lampImage from "../assets/images/lamp.jpg";
 import lampsImage2 from "../assets/images/3lamps.jpg";
 import paintImage from "../assets/images/paint.jpg";
-import plantImage from "../assets/images/Copy of plant.jpg";
-import room1BalconyImage from "../assets/images/Copy of Copy of IMG_5526.jpg";
-import room4TableImage from "../assets/images/Copy of Copy of IMG_5732.jpg";
+import plantImage from "../assets/images/plant.jpg";
+import balconyImage from "../assets/images/balcony.jpg";
+
 
 const galleryImages = [
   balconyImage,
-  familyRoomImage,
-  familyRoomImage2,
-  // budgetRoomImage,
-  chairsImage2,
-  // doubleRoomImage,
-  doubleRoomImage2,
-  // doubleRoomImage3,
+  room4Image,
+  room4Image2,
+  room1Image,
+  room2Image,
+  room2Image2,
   eyeImage,
   spaBathImage,
   chairsImage,
-  deluxeRoomImage,
   doorImage,
   libraryImage,
   paintImage,
   lampsImage2,
   lampImage,
   stairsImage,
-  room1Image,
+  room1Image2,
   plantImage,
   room1BalconyImage,
-  room4TableImage
+  room4TableImage,
+  room2CouchImage,
 ];
 
 const Gallery = () => {
@@ -63,12 +64,12 @@ const Gallery = () => {
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="break-inside-avoid shadow-md cursor-pointer"
+              className="break-inside-avoid shadow-md"
             >
               <img
                 src={image}
                 alt={`Room ${index + 1}`}
-                className="w-full object-cover rounded-md hover:scale-105 transition-transform duration-300"
+                className="w-full object-cover rounded-md"
                 loading="lazy"
               />
             </div>

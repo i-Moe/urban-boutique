@@ -11,7 +11,6 @@ const Contact = () => {
         <FadeIn>
           <h2 className="text-3xl font-bold text-center mb-8">Contact</h2>
         </FadeIn>
-        <FadeIn>
           <div className="flex flex-wrap mx-4">
             <div className="bg-lightcream p-8 rounded-md border border-choco shadow-xl h-full flex flex-col md:flex-row md:space-x-8">
               {/* Left Column: Contact Info */}
@@ -80,7 +79,6 @@ const Contact = () => {
               </div>
               </div> */}
           </div>
-        </FadeIn>
       </div>
     </section>
   );

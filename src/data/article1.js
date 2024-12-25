@@ -1,7 +1,7 @@
 import pristinaMain from "../assets/images/pristina-main.jpg";
 import pristinaLibrary from "../assets/images/pristina-library.jpg";
 import kosovoFood from "../assets/images/kosovo-food.jpg";
-import urbanBoutique from "../assets/images/urban-boutique.jpg";
+import urbanBoutique from "../assets/images/hotelCorridor.png";
 
 const article1 = {
   id: "exploring-pristina",

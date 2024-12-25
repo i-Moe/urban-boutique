@@ -1,7 +1,7 @@
 import pristinaMain from "../assets/images/pristina-main.jpg";
 import libraryImage from "../assets/images/pristina-library.jpg";
 import foodImage from "../assets/images/kosovo-food.jpg";
-import hotelImage from "../assets/images/urban-boutique.jpg";
+import hotelImage from "../assets/images/hotelCorridor.png";
 
 const article2 = {
   id: "treasures-of-pristina",
