@@ -4,9 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FadeIn from "../components/FadeIn";
 import WavyDivider from "../assets/something/wavy-steps-mirrored.svg";
-import familyRoomImage from "../assets/images/family.jpg";
-import budgetDoubleRoomImage from "../assets/images/budget.jpg";
-import spaBathRoomImage from "../assets/images/double.jpg";
+import familyRoomImage from "../assets/images/familyNew.jpg";
+import budgetDoubleRoomImage from "../assets/images/room1.png";
+import spaBathRoomImage from "../assets/images/room2.png";
 import deluxeRoomImage from "../assets/images/deluxe.jpg";
 
 const roomsData = [

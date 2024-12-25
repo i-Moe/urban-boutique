@@ -1,28 +1,28 @@
 import React from "react";
 import FadeIn from "../components/FadeIn";
 import balconyImage from "../assets/images/balcony.jpg";
-import budgetRoomImage from "../assets/images/budget.jpg";
+// import budgetRoomImage from "../assets/images/room1.jpg";
 import deluxeRoomImage from "../assets/images/deluxe.jpg";
-import doubleRoomImage from "../assets/images/double.jpg";
-import doubleRoomImage2 from "../assets/images/double2.jpg";
+// import doubleRoomImage from "../assets/images/room2.jpg";
+import doubleRoomImage2 from "../assets/images/Copy of Copy of IMG_5644.jpg";
 import doubleRoomImage3 from "../assets/images/double3.jpg";
 import eyeImage from "../assets/images/paintingOfEye.jpg";
 import spaBathImage from "../assets/images/spaBath.jpg";
 import chairsImage from "../assets/images/twoChairs.jpg";
 import chairsImage2 from "../assets/images/twoChairs2.jpg";
-import familyRoomImage from "../assets/images/family.jpg";
-import familyRoomImage2 from "../assets/images/family2.jpg";
+import familyRoomImage from "../assets/images/familyNew.jpg";
+import familyRoomImage2 from "../assets/images/Copy of Copy of IMG_5734.jpg";
 import doorImage from "../assets/images/urban-boutique.jpg";
 
 const galleryImages = [
   balconyImage,
   familyRoomImage,
   familyRoomImage2,
-  budgetRoomImage,
+  // budgetRoomImage,
   chairsImage2,
-  doubleRoomImage,
+  // doubleRoomImage,
   doubleRoomImage2,
-  doubleRoomImage3,
+  // doubleRoomImage3,
   eyeImage,
   spaBathImage,
   chairsImage,

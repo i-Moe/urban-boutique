@@ -1,5 +1,5 @@
 import React from "react";
-import balconyImage from "../assets/images/balcony.jpg";
+import balconyImage from "../assets/images/ENTRANCE.jpg";
 import WavyDivider from "../assets/something/wavy-steps.svg";
 import FadeIn from "../components/FadeIn";
 
