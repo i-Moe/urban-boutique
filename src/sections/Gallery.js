@@ -12,7 +12,13 @@ import chairsImage from "../assets/images/twoChairs.jpg";
 import chairsImage2 from "../assets/images/twoChairs2.jpg";
 import familyRoomImage from "../assets/images/familyNew.jpg";
 import familyRoomImage2 from "../assets/images/Copy of Copy of IMG_5734.jpg";
-import doorImage from "../assets/images/urban-boutique.jpg";
+import doorImage from "../assets/images/corriidor.png";
+import libraryImage from "../assets/images/libraryyy.jpg";
+import room1Image from "../assets/images/room111.jpg";
+import stairsImage from "../assets/images/stairs.jpg";
+import lampImage from "../assets/images/lamp.jpg";
+import lampsImage2 from "../assets/images/3lamps.jpg";
+import paintImage from "../assets/images/paint.jpg";
 
 const galleryImages = [
   balconyImage,
@@ -28,6 +34,12 @@ const galleryImages = [
   chairsImage,
   deluxeRoomImage,
   doorImage,
+  libraryImage,
+  paintImage,
+  lampsImage2,
+  lampImage,
+  stairsImage,
+  room1Image,
 ];
 
 const Gallery = () => {
