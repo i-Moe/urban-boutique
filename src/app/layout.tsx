@@ -11,16 +11,16 @@ export const metadata = {
   description:
     "Discover Urban Boutique Hotel in Prishtina, Kosovo. A perfect blend of comfort, style, and convenience.",
   authors: [{ name: "Urban Boutique Hotel" }],
-  metadataBase: new URL("https://urban-boutique.vercel.app"),
+  metadataBase: new URL("https://stayurbanhotel.com"),  // 🔧 URL ajustada
   openGraph: {
     title: "Urban Boutique Hotel - Prishtina, Kosovo",
     description:
       "Discover Urban Boutique Hotel in Prishtina, Kosovo. Book your stay today!",
-    url: "https://urban-boutique.vercel.app",
+    url: "https://stayurbanhotel.com",  // 🔧 URL corrigida
     siteName: "Urban Boutique Hotel",
     images: [
       {
-        url: "/images/hotel.jpg",
+        url: "https://stayurbanhotel.com/images/hotel.jpg",  // 🔧 URL completa
         width: 1200,
         height: 800,
         alt: "Urban Boutique Hotel Exterior",
@@ -31,23 +31,45 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
 };
 
-// Viewport e ThemeColor (Exportação separada para Next.js 14+)
+// Viewport e ThemeColor (Configuração separada para Next.js 14+)
 export const viewport = {
   width: "device-width",
   initialScale: 1,
+  maximumScale: 1,
+  userScalable: "no",  // 🔧 Evita zoom acidental
+  interactiveWidget: "resizes-visual",
 };
 
 export const themeColor = "#028e87";
 
+// Layout principal do site
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" aria-label="Urban Boutique Hotel Official Site">
+      <head>
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap"
+          rel="stylesheet"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="/images/hero1200w.webp"
+          as="image"
+          type="image/webp"
+        />
+      </head>
       <body className="font-sans text-choco bg-cream">
         {/* Google Tag Manager (noscript) */}
         <noscript>
@@ -61,9 +83,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </noscript>
 
         {/* Conteúdo Principal */}
-        <div className="container mx-auto max-w-5xl px-4">
-          {children}
-        </div>
+        <div className="container mx-auto max-w-5xl px-4">{children}</div>
 
         {/* Google Tag Manager Script */}
         <script

@@ -59,6 +59,7 @@ const article2 = {
     },
     {
       type: "list",
+      style: "unordered",  // 🔹 Define estilo de lista
       items: [
         "National Library of Kosovo",
         "Mother Teresa Cathedral",
@@ -134,6 +135,7 @@ const article2 = {
       title: "Exploring Pristina: A Complete Guide",
       link: "/blog/exploring-pristina",
       image: "/images/pristina-main.jpg",
+      description: "Explore the iconic landmarks and experiences in Pristina.",  // 🔹 Adicionado campo opcional
     },
   ] as RelatedArticle[],
 };

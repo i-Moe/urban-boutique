@@ -11,8 +11,8 @@ export default function BlogLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <main lang="en" aria-label="Blog articles and guides">
       {children}
-    </div>
+    </main>
   );
 }

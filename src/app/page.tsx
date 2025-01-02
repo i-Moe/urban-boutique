@@ -1,23 +1,24 @@
 import Hero from "@/components/Hero";
 import Blog from "@/components/Blog";
+import Link from "next/link";
 
 // Metadata API (Sem uso de <Head>)
 export const metadata = {
   title: "Urban Boutique Hotel - Pristina, Kosovo",
-  description: "Discover Urban Boutique Hotel in Pristina, Kosovo. A perfect blend of comfort, style, and convenience.",
-  keywords: "Hotel, Boutique, Pristina, Kosovo, Luxury, Stay",
+  description:
+    "Discover Urban Boutique Hotel in Pristina, Kosovo. A perfect blend of comfort, style, and convenience.",
   authors: [{ name: "Urban Boutique Hotel" }],
-  viewport: "width=device-width, initial-scale=1",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
     title: "Urban Boutique Hotel - Pristina, Kosovo",
     description: "Discover the best boutique hotel in Pristina, Kosovo.",
-    url: "https://urbanboutiquehotel.com",
+    url: "https://stayurbanhotel.com",
     images: [
       {
-        url: "/images/hero1200w.webp",
+        url: "https://stayurbanhotel.com/images/hero1200w.webp",
         width: 1200,
         height: 800,
         alt: "Urban Boutique Hotel Hero Image",
@@ -29,30 +30,60 @@ export const metadata = {
     card: "summary_large_image",
   },
   alternates: {
-    canonical: "https://urbanboutiquehotel.com",
+    canonical: "https://stayurbanhotel.com",
   },
 };
 
 export default function Home() {
   return (
-    <main className="container-max-w-5xl">
-      <Hero />
+    <main className="container-max-w-5xl" aria-label="Urban Boutique Hotel Homepage">
+      <Hero />  {/* 🔧 Hero já cuida da imagem */}
       <Blog />
-      <section className="py-16 text-center">
-        <h2 className="text-3xl font-bold mb-6">Experience the Difference</h2>
+      
+      <section className="py-16 text-center" aria-label="Unique guest experience at Urban Boutique Hotel">
+        <h2 className="text-3xl font-bold mb-6" aria-label="Experience the Difference">
+          Experience the Difference
+        </h2>
         <p className="text-lg leading-relaxed max-w-3xl mx-auto">
           Urban Boutique Hotel is designed for guests seeking a unique
           experience, blending luxury, comfort, and a touch of Kosovo's rich
           culture.
         </p>
-        <a
-          href="/about"
-          className="mt-8 inline-block px-6 py-3 bg-vitamin text-white font-semibold rounded-lg shadow-lg hover:bg-lemon transition"
-          aria-label="See more about Urban Boutique Hotel"
-        >
-          See More
-        </a>
+        
+        <Link href="/about" passHref legacyBehavior>
+          <a
+            className="mt-8 inline-block px-6 py-3 bg-vitamin text-white font-semibold rounded-lg shadow-lg hover:bg-lemon transition"
+            aria-label="Learn more about Urban Boutique Hotel"
+          >
+            See More
+          </a>
+        </Link>
       </section>
+      
+      {/* Schema.org - WebSite e Organization */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Urban Boutique Hotel",
+            "url": "https://stayurbanhotel.com",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Urban Boutique Hotel",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://stayurbanhotel.com/images/logo.png",
+                "width": 600,
+                "height": 60
+              }
+            }
+          }
+        `,
+        }}
+      />
     </main>
   );
 }
