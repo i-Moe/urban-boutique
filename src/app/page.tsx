@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Blog from "@/components/Blog";
+import Rooms from "@/components/Rooms";
 import Link from "next/link";
 
 // Metadata API (Sem uso de <Head>)
