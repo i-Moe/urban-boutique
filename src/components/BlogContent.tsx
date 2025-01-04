@@ -1,12 +1,31 @@
 import { ContentBlock } from "@/data/articles";
+import Script from "next/script";
 
 interface BlogContentProps {
   content: ContentBlock[];
 }
 
 export default function BlogContent({ content }: BlogContentProps) {
+  // 🔹 Gerar o schema de ArticleSection dinamicamente
+  const articleSectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": content
+      .filter((block) => block.type === "heading" || block.type === "paragraph")
+      .map((block) => block.text)
+      .filter(Boolean),  // Filtra blocos sem texto
+  };
+
   return (
     <div className="prose prose-lg max-w-none px-3">
+      {/* 🔹 Injeção do schema */}
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSectionSchema),
+        }}
+      />
+
       {content.map((block, index) => {
         switch (block.type) {
           case "heading":
@@ -29,8 +48,8 @@ export default function BlogContent({ content }: BlogContentProps) {
             return (
               <img
                 key={index}
-                src={block.src || "/images/placeholder.jpg"}  // Fallback de imagem
-                alt={block.alt || "Article Image"}  // Fallback de alt
+                src={block.src || "/images/placeholder.jpg"}
+                alt={block.alt || "Article Image"}
                 className="w-full h-auto max-h-[70vh] my-8 rounded-lg object-contain"
               />
             );

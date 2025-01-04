@@ -8,7 +8,6 @@ export const metadata = {
   description:
     "Discover Urban Boutique Hotel in Pristina, Kosovo. A perfect blend of comfort, style, and convenience.",
   authors: [{ name: "Urban Boutique Hotel" }],
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   icons: {
     icon: "/favicon.ico",
   },
@@ -34,6 +33,15 @@ export const metadata = {
   },
 };
 
+// 🔧 Viewport deve ser exportado separadamente
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: "no",
+};
+
+// Página principal do site
 export default function Home() {
   return (
     <main className="container-max-w-5xl" aria-label="Urban Boutique Hotel Homepage">
@@ -75,7 +83,7 @@ export default function Home() {
               "name": "Urban Boutique Hotel",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://stayurbanhotel.com/images/logo.png",
+                "url": "https://stayurbanhotel.com/images/logo.webp",
                 "width": 600,
                 "height": 60
               }
