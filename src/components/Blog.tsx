@@ -39,7 +39,7 @@ const Blog = () => {
               <p className="mt-3 text-gray-600 leading-relaxed">{article.subtitle}</p>
               
               <Link href={`/blog/${article.id}`} passHref>
-                <span className="text-vitamin font-bold mt-5 inline-block hover:underline cursor-pointer">
+                <span className="text-vitamin font-bold mt-5 inline-block underline-effect cursor-pointer">
                   Read more →
                 </span>
               </Link>

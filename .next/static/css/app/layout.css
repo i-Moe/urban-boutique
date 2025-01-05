@@ -53,6 +53,29 @@ img {
   background-color: #f7f2eb; /* light cream */
 }
 
+
+/* styles.css */
+.underline-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-effect::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 0.8px;
+  background-color: #ff8b00; /* Your vitamin color */
+  transition: all 0.3s;
+}
+
+.underline-effect:hover::after {
+  width: 100%;
+  transform-origin: left;
+}
+
 /*!*********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/styles/tailwind.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************/
