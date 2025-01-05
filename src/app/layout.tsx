@@ -83,7 +83,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </noscript>
 
         {/* Conteúdo Principal */}
-        <div className="container mx-auto max-w-5xl px-4">{children}</div>
+        <div>{children}</div>
 
         {/* Google Tag Manager Script */}
         <script

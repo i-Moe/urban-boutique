@@ -45,7 +45,7 @@ export const viewport = {
 // Página principal do site
 export default function Home() {
   return (
-    <main className="container-max-w-5xl" aria-label="Urban Boutique Hotel Homepage">
+    <main aria-label="Urban Boutique Hotel Homepage">
       <Hero />  {/* 🔧 Hero já cuida da imagem */}
       <Blog />
       

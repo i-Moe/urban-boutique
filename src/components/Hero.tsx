@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="relative bg-cover bg-center min-h-[93vh] flex items-center justify-center py-14">
+    <section className="relative min-h-[93vh] flex items-center justify-center py-14">
       {/* Overlay para contraste */}
       <div className="absolute inset-0 bg-black bg-opacity-40 -z-10"></div>
 
@@ -10,15 +10,17 @@ const Hero = () => {
       <div className="absolute inset-0 -z-20">
         <Image
           src="/images/hero1200w.webp"
-          alt="Luxury boutique hotel room with city view"
-          fill 
-          style={{ objectFit: 'cover' }}
+          alt="Beds in Urban Boutique Hotel"
+          layout="fill"
+          objectFit="cover"  // Ensures the image covers the whole section
+          className="object-cover"
+          priority 
         />
       </div>
 
       {/* Conteúdo do Hero */}
-      <div className="container mx-auto px-4 text-center sm:text-left text-lightcream relative z-10">
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center sm:items-start justify-between">
+      <div className="container-max-w-5xl text-center sm:text-left text-lightcream relative z-10">
+        <div className="mx-auto flex flex-col sm:flex-row items-center sm:items-start justify-between">
           <div className="sm:w-3/5 mb-8">
             <h1 className="text-3xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-shadow-urban">
               Welcome to <br />
