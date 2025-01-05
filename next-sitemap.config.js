@@ -18,7 +18,7 @@ const config = {
     const isBlogPost = path.startsWith('/blog/');
     return {
       loc: path,
-      changefreq: isBlogPost ? 'daily' : 'weekly',
+      changefreq: isBlogPost ? 'weekly' : 'weekly',
       priority: isBlogPost ? 1.0 : (path === '/' ? 0.9 : 0.7),
       lastmod: new Date().toISOString(),
     };

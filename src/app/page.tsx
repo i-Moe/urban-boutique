@@ -59,7 +59,7 @@ export default function Home() {
           culture.
         </p>
         
-        <Link href="/about" passHref legacyBehavior>
+        <Link href="/" passHref legacyBehavior>
           <a
             className="mt-8 inline-block px-6 py-3 bg-vitamin text-white font-semibold rounded-lg shadow-lg hover:bg-lemon transition"
             aria-label="Learn more about Urban Boutique Hotel"
@@ -67,7 +67,10 @@ export default function Home() {
             See More
           </a>
         </Link>
+        <Rooms />
+
       </section>
+      
       
       {/* Schema.org - WebSite e Organization */}
       <script

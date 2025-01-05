@@ -48,7 +48,7 @@ export default function BlogContent({ content }: BlogContentProps) {
             return (
               <img
                 key={index}
-                src={block.src || "/images/placeholder.jpg"}
+                src={block.src || "/images/placeholder.webp"}
                 alt={block.alt || "Article Image"}
                 className="w-full h-auto max-h-[70vh] my-8 rounded-lg object-contain"
               />
