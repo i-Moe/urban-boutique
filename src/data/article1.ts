@@ -1,4 +1,4 @@
-import { ContentBlock, RelatedArticle } from "@/data/articles";  // Importa a tipagem se necessário
+import { ContentBlock, RelatedArticle } from "@/data/articles";  // Importa a tipagem
 
 const article1 = {
   id: "exploring-pristina",
@@ -76,6 +76,7 @@ const article1 = {
       title: "Hidden Treasures of Pristina",
       link: "/blog/treasures-of-pristina",
       image: "/images/kosovo-food.jpg",
+      description: "Discover more cultural and culinary experiences in Pristina.",
     },
   ] as RelatedArticle[],
 };

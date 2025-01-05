@@ -10,7 +10,7 @@ export interface Article {
   date: string;
   category: string;
   image: string;
-  alt: string;  // Adicionado para evitar erro de acessibilidade
+  alt: string;
   content: ContentBlock[];
   relatedArticles: RelatedArticle[];
 }
@@ -22,15 +22,25 @@ export interface ContentBlock {
   src?: string;
   alt?: string;
   items?: string[];
+  style?: "ordered" | "unordered";
 }
 
 export interface RelatedArticle {
   title: string;
   link: string;
   image: string;
+  description?: string;
 }
 
 // Lista de artigos importados
-const articles: Article[] = [article1, article2];
+const articles: Article[] = [article1, article2].map((article) => ({
+  ...article,
+  alt: article.alt || "Default alt text for accessibility",  // 🔹 Fallback automático
+  relatedArticles: article.relatedArticles.map((related) => ({
+    ...related,
+    description: related.description || "Explore related articles.",
+  })),
+}));
 
 export default articles;
+

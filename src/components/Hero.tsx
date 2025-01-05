@@ -11,10 +11,8 @@ const Hero = () => {
         <Image
           src="/images/hero1200w.webp"
           alt="Luxury boutique hotel room with city view"
-          layout="fill"
-          objectFit="cover"
-          quality={90}
-          priority
+          fill 
+          style={{ objectFit: 'cover' }}
         />
       </div>
 
