@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 import Blog from "@/components/Blog";
 import Rooms from "@/components/Rooms";
 import Footer from "@/components/Footer";
@@ -52,6 +53,7 @@ export default function Home() {
       <Header />
       <main aria-label="Urban Boutique Hotel Homepage">
         <Hero />  {/* 🔧 Hero já cuida da imagem */}
+        <About />
         <Rooms />
         <Blog />
 
