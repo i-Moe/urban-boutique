@@ -24,7 +24,7 @@ const Blog = () => {
                     width={600}
                     height={400}
                     layout="responsive"
-                    className="rounded-md"
+                    className="mb-5 object-cover rounded-md"
                     priority={index === 0} // Prioriza o primeiro artigo
                   />
                 </div>

@@ -1,6 +1,8 @@
+// import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Blog from "@/components/Blog";
 import Rooms from "@/components/Rooms";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 
 // Metadata API (Sem uso de <Head>)
@@ -45,35 +47,37 @@ export const viewport = {
 // Página principal do site
 export default function Home() {
   return (
-    <main aria-label="Urban Boutique Hotel Homepage">
-      <Hero />  {/* 🔧 Hero já cuida da imagem */}
-      <Blog />
-      
-      <section className="py-16 text-center" aria-label="Unique guest experience at Urban Boutique Hotel">
-        <h2 className="text-3xl font-bold mb-6" aria-label="Experience the Difference">
-          Experience the Difference
-        </h2>
-        <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-          Urban Boutique Hotel is designed for guests seeking a unique
-          experience, blending luxury, comfort, and a touch of Kosovo's rich
-          culture.
-        </p>
-        
-        <Link href="/about" passHref legacyBehavior>
-          <a
-            className="mt-8 inline-block px-6 py-3 bg-vitamin text-white font-semibold rounded-lg shadow-lg hover:bg-lemon transition"
-            aria-label="Learn more about Urban Boutique Hotel"
-          >
-            See More
-          </a>
-        </Link>
-      </section>
-      
-      {/* Schema.org - WebSite e Organization */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: `
+    <>
+      {/* <Header /> */}
+      <main aria-label="Urban Boutique Hotel Homepage">
+        <Hero />  {/* 🔧 Hero já cuida da imagem */}
+        <Blog />
+
+        <section className="py-16 text-center" aria-label="Unique guest experience at Urban Boutique Hotel">
+          <h2 className="text-3xl font-bold mb-6" aria-label="Experience the Difference">
+            Experience the Difference
+          </h2>
+          <p className="text-lg leading-relaxed max-w-3xl mx-auto">
+            Urban Boutique Hotel is designed for guests seeking a unique
+            experience, blending luxury, comfort, and a touch of Kosovo's rich
+            culture.
+          </p>
+
+          <Link href="/about" passHref legacyBehavior>
+            <a
+              className="mt-8 inline-block px-6 py-3 bg-vitamin text-white font-semibold rounded-lg shadow-lg hover:bg-lemon transition"
+              aria-label="Learn more about Urban Boutique Hotel"
+            >
+              See More
+            </a>
+          </Link>
+        </section>
+
+        {/* Schema.org - WebSite e Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
           {
             "@context": "https://schema.org",
             "@type": "WebSite",
@@ -91,8 +95,12 @@ export default function Home() {
             }
           }
         `,
-        }}
-      />
-    </main>
+          }}
+        />
+      </main>
+
+      <Footer />
+
+    </>
   );
 }
