@@ -6,35 +6,35 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import WavyDivider from "../assets/something/wavy-steps-mirrored.svg";
+// import WavyDivider from "../assets/something/wavy-steps-mirrored.svg";
 
 // Importe as imagens com next/image
-import familyRoomImage from "../assets/images/family.jpg";
-import budgetDoubleRoomImage from "../assets/images/budget.jpg";
-import spaBathRoomImage from "../assets/images/double.jpg";
-import deluxeRoomImage from "../assets/images/deluxe.jpg";
+// import familyRoomImage from "/images/familyNew.jpg";
+// import budgetDoubleRoomImage from "/images/budget.jpg";
+// import spaBathRoomImage from "/images/balcony.jpg";
+// import deluxeRoomImage from "/images/deluxe.jpg";
 
 const roomsData = [
   {
-    image: familyRoomImage,
+    image: "/images/familyNew.jpg",
     title: "Family Room with Bathroom",
     description:
       "2 single beds and 1 extra-large double bed. A cozy space perfect for families.",
   },
   {
-    image: budgetDoubleRoomImage,
+    image: "/images/budget.jpg",
     title: "Budget Double Room",
     description:
       "1 large double bed. Ideal for couples or solo travelers seeking comfort at a great value.",
   },
   {
-    image: spaBathRoomImage,
+    image: "/images/balcony.jpg",
     title: "Double Room with Spa Bath",
     description:
       "1 extra-large double bed. Relax and unwind in a spacious room with a spa bath.",
   },
   {
-    image: deluxeRoomImage,
+    image: "/images/deluxe.jpg",
     title: "Deluxe Double or Twin Room with Balcony",
     description:
       "1 single bed and 1 large double bed. A stylish room with a balcony for a refreshing escape.",
@@ -109,14 +109,14 @@ export default function Rooms() {
       </section>
 
       {/* Wavy Divider */}
-      <Image
+      {/* <Image
         src={WavyDivider}
         alt="Wavy divider"
         width={1920}
         height={150}
         priority
         className="block w-full mt-[-3px]"
-      />
+      /> */}
     </>
   );
 }

@@ -52,6 +52,7 @@ export default function Home() {
       <Header />
       <main aria-label="Urban Boutique Hotel Homepage">
         <Hero />  {/* 🔧 Hero já cuida da imagem */}
+        <Rooms />
         <Blog />
 
         <section className="py-16 text-center" aria-label="Unique guest experience at Urban Boutique Hotel">
