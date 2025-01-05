@@ -19,9 +19,9 @@
     @apply text-2xl;
   }
 
-  a {
+  /* a {
     @apply text-vitamin hover:underline decoration-[0.8px] underline-offset-4;
-  }
+  } */
 }
 
 @layer components {

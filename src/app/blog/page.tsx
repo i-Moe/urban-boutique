@@ -25,7 +25,7 @@ export default function Blog() {
           __html: JSON.stringify(schemaData),
         }}
       />
-      <div className="container mx-auto max-w-5xl px-4">
+      <div className="container-max-w-5xl">
         <h1 className="text-4xl font-bold text-center mb-12">Blog</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -36,15 +36,16 @@ export default function Blog() {
             >
               {/* Imagem do Artigo */}
               <Link href={`/blog/${article.id}`} aria-label={`Read more about ${article.title}`}>
-                <Image
-                  src={article.image}
-                  alt={article.alt || `Cover image for ${article.title}`}
-                  width={600}
-                  height={400}
-                  layout="responsive"
-                  className="mb-5 object-cover rounded-md"
-                  priority={index === 0}  // Prioriza a primeira imagem
-                /> 
+                <div className="cursor-pointer w-full h-44 relative mb-5 rounded-md overflow-hidden">
+                  <Image
+                    src={article.image}
+                    alt={article.alt || `Cover image for ${article.title}`}
+                    layout="fill"
+                    objectFit="cover"
+                    className="mb-5 rounded-md"
+                    priority={index === 0}  // Prioriza a primeira imagem
+                  />
+                </div>
               </Link>
 
               {/* Título do Artigo */}

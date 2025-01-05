@@ -64,11 +64,33 @@ img {
   bottom: -1px;
   width: 0;
   height: 0.8px;
-  background-color: #ff8b00; /* Your vitamin color */
+  background-color: theme('colors.vitamin'); /* Your vitamin color */
   transition: all 0.3s;
 }
 
 .underline-effect:hover::after {
+  width: 100%;
+  transform-origin: left;
+}
+
+
+.underline-effect-mint {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-effect-mint::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0.8px;
+  background-color: theme('colors.mint'); /* Your vitamin color */
+  transition: all 0.3s;
+}
+
+.underline-effect-mint:hover::after {
   width: 100%;
   transform-origin: left;
 }

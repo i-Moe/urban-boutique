@@ -1,9 +1,10 @@
-// import Header from "@/components/Header";
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Blog from "@/components/Blog";
 import Rooms from "@/components/Rooms";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 // Metadata API (Sem uso de <Head>)
 export const metadata = {
@@ -48,7 +49,7 @@ export const viewport = {
 export default function Home() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <main aria-label="Urban Boutique Hotel Homepage">
         <Hero />  {/* 🔧 Hero já cuida da imagem */}
         <Blog />
@@ -72,6 +73,9 @@ export default function Home() {
             </a>
           </Link>
         </section>
+
+        <WhatsAppButton />
+
 
         {/* Schema.org - WebSite e Organization */}
         <script

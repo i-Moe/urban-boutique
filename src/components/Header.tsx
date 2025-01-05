@@ -49,16 +49,16 @@ const Header = () => {
 
                 {/* Menu (Desktop) */}
                 <nav className="hidden sm:flex space-x-6">
-                    <Link href="#about" passHref className="text-lg hover:text-mint">
+                    <Link href="#about" passHref className="text-lg underline-effect-mint hover:text-mint">
                         About
                     </Link>
-                    <Link href="#rooms" passHref className="text-lg hover:text-mint">
+                    <Link href="#rooms" passHref className="text-lg underline-effect-mint hover:text-mint">
                        Rooms
                     </Link>
-                    <Link href="#gallery" passHref>
-                        <a className="text-lg hover:text-mint">Gallery</a>
+                    <Link href="#gallery" passHref className="text-lg underline-effect-mint hover:text-mint">
+                       Gallery
                     </Link>
-                    <Link href="#contact" passHref className="text-lg hover:text-mint">
+                    <Link href="#contact" passHref className="text-lg underline-effect-mint hover:text-mint">
                         Contact
                     </Link>
                 </nav>

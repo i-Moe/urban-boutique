@@ -17,14 +17,13 @@ const Blog = () => {
               className="bg-lightcream border border-choco p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <Link href={`/blog/${article.id}`} passHref>
-                <div className="cursor-pointer">
+                <div className="cursor-pointer w-full h-44 relative mb-5 rounded-md overflow-hidden">
                   <Image
                     src={article.image}
                     alt={article.alt || `Cover image for ${article.title}`}
-                    width={600}
-                    height={400}
-                    layout="responsive"
-                    className="mb-5 object-cover rounded-md"
+                    layout="fill"
+                    objectFit="cover"
+                    className="mb-5 rounded-md"
                     priority={index === 0} // Prioriza o primeiro artigo
                   />
                 </div>
