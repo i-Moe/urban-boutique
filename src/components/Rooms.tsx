@@ -6,6 +6,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+<<<<<<< HEAD
 // import WavyDivider from "../assets/something/wavy-steps-mirrored.svg";
 
 // Importe as imagens com next/image
@@ -17,6 +18,15 @@ import "swiper/css/navigation";
 const roomsData = [
   {
     image: "/images/familyNew.jpg",
+=======
+
+// Caminhos das imagens
+const WavyDivider = "/images/wavy-steps-mirrored.svg";
+
+const roomsData = [
+  {
+    image: "/images/family.jpg",
+>>>>>>> 4d9c6801e080c1c005c8d12afd21c0652a948a5f
     title: "Family Room with Bathroom",
     description:
       "2 single beds and 1 extra-large double bed. A cozy space perfect for families.",
@@ -28,7 +38,11 @@ const roomsData = [
       "1 large double bed. Ideal for couples or solo travelers seeking comfort at a great value.",
   },
   {
+<<<<<<< HEAD
     image: "/images/balcony.jpg",
+=======
+    image: "/images/double.jpg",
+>>>>>>> 4d9c6801e080c1c005c8d12afd21c0652a948a5f
     title: "Double Room with Spa Bath",
     description:
       "1 extra-large double bed. Relax and unwind in a spacious room with a spa bath.",
@@ -46,10 +60,10 @@ export default function Rooms() {
     <>
       <section
         id="rooms"
-        className="py-40 mt-[-150px] z-[-200] relative bg-chillmint"
+        className="py-40 mt-[-150px] z-[-200] relative bg-chillmint overflow-hidden"
         aria-labelledby="rooms-title"
       >
-        <div className="w-screen">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -64,14 +78,13 @@ export default function Rooms() {
             </h2>
           </motion.div>
 
-          {/* Swiper Slider */}
           <Swiper
             modules={[Autoplay, Pagination, Navigation]}
             spaceBetween={30}
             slidesPerView={1}
             centeredSlides={true}
             loop={true}
-            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            autoplay={{ delay: 6000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
             navigation={true}
             breakpoints={{
@@ -83,7 +96,6 @@ export default function Rooms() {
               <SwiperSlide key={index}>
                 <div className="px-4">
                   <div className="bg-cream border border-choco rounded-lg shadow-xl overflow-hidden h-full flex flex-col min-h-[400px]">
-                    {/* Imagem usando next/image */}
                     <div className="relative w-full h-56">
                       <Image
                         src={room.image}
@@ -91,7 +103,7 @@ export default function Rooms() {
                         layout="fill"
                         objectFit="cover"
                         quality={90}
-                        priority={index === 0} // Prioriza a primeira imagem
+                        priority={index === 0}
                       />
                     </div>
                     <div className="p-6 text-left flex-grow flex flex-col">
@@ -108,8 +120,12 @@ export default function Rooms() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Wavy Divider */}
       {/* <Image
+=======
+      <Image
+>>>>>>> 4d9c6801e080c1c005c8d12afd21c0652a948a5f
         src={WavyDivider}
         alt="Wavy divider"
         width={1920}

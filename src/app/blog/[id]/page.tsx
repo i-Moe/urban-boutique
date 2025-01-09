@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
       url: `https://stayurbanhotel.com/blog/${article.id}`,
       images: [
         {
-          url: article.image || "/images/placeholder.jpg",
+          url: article.image || "/images/placeholder.webp",
           width: 1200,
           height: 800,
           alt: article.alt || "Urban Boutique Hotel - Blog Image",

@@ -49,6 +49,7 @@ export const viewport = {
 // Página principal do site
 export default function Home() {
   return (
+<<<<<<< HEAD
     <>
       <Header />
       <main aria-label="Urban Boutique Hotel Homepage">
@@ -85,6 +86,40 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: `
+=======
+    <main className="container-max-w-5xl" aria-label="Urban Boutique Hotel Homepage">
+      <Hero />  {/* 🔧 Hero já cuida da imagem */}
+      <Blog />
+      
+      <section className="py-16 text-center" aria-label="Unique guest experience at Urban Boutique Hotel">
+        <h2 className="text-3xl font-bold mb-6" aria-label="Experience the Difference">
+          Experience the Difference
+        </h2>
+        <p className="text-lg leading-relaxed max-w-3xl mx-auto">
+          Urban Boutique Hotel is designed for guests seeking a unique
+          experience, blending luxury, comfort, and a touch of Kosovo's rich
+          culture.
+        </p>
+        
+        <Link href="/" passHref legacyBehavior>
+          <a
+            className="mt-8 inline-block px-6 py-3 bg-vitamin text-white font-semibold rounded-lg shadow-lg hover:bg-lemon transition"
+            aria-label="Learn more about Urban Boutique Hotel"
+          >
+            See More
+          </a>
+        </Link>
+        <Rooms />
+
+      </section>
+      
+      
+      {/* Schema.org - WebSite e Organization */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `
+>>>>>>> 4d9c6801e080c1c005c8d12afd21c0652a948a5f
           {
             "@context": "https://schema.org",
             "@type": "WebSite",
