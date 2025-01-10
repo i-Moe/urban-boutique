@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Blog from "@/components/Blog";
 import Rooms from "@/components/Rooms";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -56,6 +57,7 @@ export default function Home() {
         <About />
         <Rooms />
         <Blog />
+        <Contact />
 
         <section className="py-16 text-center" aria-label="Unique guest experience at Urban Boutique Hotel">
           <h2 className="text-3xl font-bold mb-6" aria-label="Experience the Difference">

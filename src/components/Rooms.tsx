@@ -49,7 +49,7 @@ export default function Rooms() {
         className="py-40 mt-[-150px] z-[-200] relative bg-chillmint"
         aria-labelledby="rooms-title"
       >
-        <div className="w-screen">
+        <div className="max-w-screen">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
