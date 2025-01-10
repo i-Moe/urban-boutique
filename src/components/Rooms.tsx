@@ -22,13 +22,13 @@ const roomsData = [
       "2 single beds and 1 extra-large double bed. A cozy space perfect for families.",
   },
   {
-    image: "/images/budget.jpg",
+    image: "/images/room1.png",
     title: "Budget Double Room",
     description:
       "1 large double bed. Ideal for couples or solo travelers seeking comfort at a great value.",
   },
   {
-    image: "/images/balcony.jpg",
+    image: "/images/room2.png",
     title: "Double Room with Spa Bath",
     description:
       "1 extra-large double bed. Relax and unwind in a spacious room with a spa bath.",
