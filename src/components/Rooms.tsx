@@ -67,7 +67,7 @@ export default function Rooms() {
           {/* Swiper Slider */}
           <Swiper
             modules={[Autoplay, Pagination, Navigation]}
-            spaceBetween={30}
+            spaceBetween={10}
             slidesPerView={1}
             centeredSlides={true}
             loop={true}

@@ -71,7 +71,7 @@ export default function ArticlePage({ params }: { params: { id: string } }) {
 
   return (
     <main
-      className="container mx-auto max-w-5xl px-4 py-12"
+      className="container-max-w-5xl py-12"
       aria-label={`Blog article - ${article.title}`}
     >
       {/* Injeção de schema JSON-LD no head */}
@@ -94,7 +94,7 @@ export default function ArticlePage({ params }: { params: { id: string } }) {
         </section>
 
         <aside
-          className="w-full lg:w-1/4 mt-8 lg:mt-0 lg:pl-6"
+          className="w-full lg:w-1/4 lg:sticky lg:top-16 max-h-[calc(100vh-48px)] min-h-[200px] overflow-auto py-4 mt-8 lg:mt-0 sm:p-4 lg:py-4 lg:pl-5"
           aria-label="Related articles sidebar"
         >
           <BlogSideBar relatedArticles={article.relatedArticles} />

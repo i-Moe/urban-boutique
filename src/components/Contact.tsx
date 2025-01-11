@@ -8,7 +8,7 @@ const Contact = () => {
     >
       <div className="container-max-w-5xl">
         <h2 className="text-3xl font-bold text-center mb-8">Contact</h2>
-        <div className="flex flex-wrap mx-4">
+        <div className="flex flex-wrap">
           <div className="bg-lightcream p-8 rounded-md border border-choco shadow-xl h-full flex flex-col md:flex-row md:space-x-8">
             {/* Left Column: Contact Info */}
             <div className="md:w-1/2">
@@ -31,12 +31,12 @@ const Contact = () => {
             {/* Right Column: Map */}
             <div className="md:w-1/2 mt-6 md:mt-0">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.5412067782463!2d21.16671347538548!3d42.67107687116565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549f66848260c9%3A0x2fa3c6eab4e609c7!2sUrban%20Boutique%20Hotel%20Prishtina!5e0!3m2!1sen!2s!4v1733426960984!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.541206778246!2d21.166713475385492!3d42.67107687116566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549f66848260c9%3A0x2fa3c6eab4e609c7!2sUrban%20Boutique%20Hotel%20Prishtina!5e0!3m2!1sen!2smk!4v1736525867408!5m2!1sen!2smk"
                 className="w-full h-60 lg:h-80"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                referrerPolicy="origin"
                 title="Map showing the location of Urban Boutique Hotel in Prishtina"
               ></iframe>
             </div>

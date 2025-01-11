@@ -2,6 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import articles from "@/data/articles";
 import Script from "next/script";
+import BlogCard from "@/components/BlogCard";
+
+interface Article {
+  id: string;
+  image: string;
+  alt?: string;
+  title: string;
+  subtitle: string;
+}
+
 
 export default function Blog() {
   const latestArticles = articles.slice(0, 6);
@@ -30,41 +40,7 @@ export default function Blog() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {latestArticles.map((article, index) => (
-            <div
-              key={article.id}
-              className="bg-lightcream border border-choco p-4 rounded-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              {/* Imagem do Artigo */}
-              <Link href={`/blog/${article.id}`} aria-label={`Read more about ${article.title}`}>
-                <div className="cursor-pointer w-full h-44 relative mb-5 rounded-md overflow-hidden">
-                  <Image
-                    src={article.image}
-                    alt={article.alt || `Cover image for ${article.title}`}
-                    layout="fill"
-                    objectFit="cover"
-                    className="mb-5 rounded-md"
-                    priority={index === 0}  // Prioriza a primeira imagem
-                  />
-                </div>
-              </Link>
-
-              {/* Título do Artigo */}
-              <Link href={`/blog/${article.id}`} aria-label={`Go to article: ${article.title}`}>
-                <h2 className="text-xl font-bold mt-4 hover:underline decoration-choco">
-                  {article.title}
-                </h2>
-              </Link>
-
-              {/* Subtítulo */}
-              <p className="mt-3 text-gray-600">{article.subtitle}</p>
-
-              {/* Link "Read More" */}
-              <Link href={`/blog/${article.id}`} aria-label={`Continue reading: ${article.title}`}>
-                <span className="text-vitamin font-bold mt-5 inline-block underline-effect cursor-pointer">
-                  Read more →
-                </span>
-              </Link>
-            </div>
+             <BlogCard key={article.id} article={article} index={index} />
           ))}
         </div>
       </div>

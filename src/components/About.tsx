@@ -67,8 +67,8 @@ const About = () => {
             {/* Balcony Image */}
             <div className="md:w-1/3 mb-8 md:mb-0">
             <Image
-              src="/images/balcony.jpg"
-              alt="Balcony view"
+              src="/images/ENTRANCE.jpg"
+              alt="Entrance"
               width={600}
               height={400}
               className="w-full h-auto object-cover rounded-md "

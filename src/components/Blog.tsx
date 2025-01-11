@@ -1,6 +1,16 @@
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
+import BlogCard from "./BlogCard";
 import articles from "@/data/articles";
+
+interface Article {
+  id: string;
+  image: string;
+  alt?: string;
+  title: string;
+  subtitle: string;
+}
+
 
 const Blog = () => {
   const latestArticles = articles.slice(0, 3); // Pega os 3 últimos artigos
@@ -12,39 +22,19 @@ const Blog = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {latestArticles.map((article, index) => (
-            <div
-              key={article.id}
-              className="bg-lightcream border border-choco p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <Link href={`/blog/${article.id}`} passHref>
-                <div className="cursor-pointer w-full h-44 relative mb-5 rounded-md overflow-hidden">
-                  <Image
-                    src={article.image}
-                    alt={article.alt || `Cover image for ${article.title}`}
-                    layout="fill"
-                    objectFit="cover"
-                    className="mb-5 rounded-md"
-                    priority={index === 0} // Prioriza o primeiro artigo
-                  />
-                </div>
-              </Link>
-              
-              <Link href={`/blog/${article.id}`} passHref>
-                <h2 className="text-xl font-bold mt-4 hover:underline decoration-choco decoration-[0.8px] underline-offset-4 cursor-pointer">
-                  {article.title}
-                </h2>
-              </Link>
-              
-              <p className="mt-3 text-gray-600 leading-relaxed">{article.subtitle}</p>
-              
-              <Link href={`/blog/${article.id}`} passHref>
-                <span className="text-vitamin font-bold mt-5 inline-block underline-effect cursor-pointer">
-                  Read more →
-                </span>
-              </Link>
-            </div>
+             <BlogCard key={article.id} article={article} index={index} />
           ))}
         </div>
+
+        <div className="flex justify-center mt-8 space-x-2">
+          <Link
+            href="/blog"
+            className="text-lightcream text-lg border border-ligtcream shadow-md px-6 py-3 rounded-full font-semibold hover:bg-lightcream hover:text-chillmint transition duration-300"
+          >
+            Check more articles
+          </Link>
+        </div>
+
       </div>
     </section>
   );

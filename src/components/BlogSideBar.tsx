@@ -16,7 +16,7 @@ export default function BlogSideBar({ relatedArticles }: BlogSideBarProps) {
       <ul>
         {relatedArticles.map((article, index) => (
           <li key={index} className="mb-4 flex items-center">
-            <div className="w-16 h-16 relative">
+            <div className="w-16 h-16 relative mr-4 rounded-lg overflow-hidden">
               <Image
                 src={article.image || "/images/default-thumb.jpg"}
                 alt={article.title || "Related article thumbnail"}
@@ -25,6 +25,7 @@ export default function BlogSideBar({ relatedArticles }: BlogSideBarProps) {
                 className="rounded-lg"
               />
             </div>
+
             <Link href={article.link}>
               <span className="text-mint hover:underline decoration-[0.8px] underline-offset-4 flex-1 cursor-pointer">
                 {article.title}

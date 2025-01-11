@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import BlogNavbar from "@/components/BlogNavbar";
+import BlogFooter from '@/components/BlogFooter';
+
 
 export const metadata: Metadata = {
   title: "Blog - Urban Boutique Hotel",
@@ -11,8 +14,12 @@ export default function BlogLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main lang="en" aria-label="Blog articles and guides">
-      {children}
-    </main>
+    <>
+      <BlogNavbar />
+      <main lang="en" aria-label="Blog articles and guides">
+        {children}
+      </main>
+      <BlogFooter />
+    </>
   );
 }
