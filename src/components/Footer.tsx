@@ -22,7 +22,7 @@ const Footer = () => {
             <a href="#gallery" className="text-cream hover:text-vitamin mx-2">Gallery</a>
             <a href="#contact" className="text-cream hover:text-vitamin mx-2">Contact</a>
           </div>
-          <p className="text-sm my-2">&copy; {new Date().getFullYear()} Urban Boutique Hotel. All rights reserved.</p>
+          <p className="text-sm my-2">&copy; {new Date().getFullYear()} Godines Hotel. All rights reserved.</p>
         </div>
       </footer>
     </>
