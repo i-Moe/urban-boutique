@@ -55,8 +55,8 @@ const Header = () => {
                     <Link href="#rooms" passHref className="text-lg underline-effect-mint hover:text-mint">
                        Rooms
                     </Link>
-                    <Link href="#gallery" passHref className="text-lg underline-effect-mint hover:text-mint">
-                       Gallery
+                    <Link href="#blog" passHref className="text-lg underline-effect-mint hover:text-mint">
+                       Blog
                     </Link>
                     <Link href="#contact" passHref className="text-lg underline-effect-mint hover:text-mint">
                         Contact
@@ -77,8 +77,8 @@ const Header = () => {
                     <Link href="#rooms" passHref className="block px-4 py-2 text-cream text-lg w-full text-center hover:text-cream">
                             Rooms
                     </Link>
-                    <Link href="#gallery" passHref className="block px-4 py-2 text-cream text-lg w-full text-center hover:text-cream">
-                            Gallery
+                    <Link href="#blog" passHref className="block px-4 py-2 text-cream text-lg w-full text-center hover:text-cream">
+                            Blog
                     </Link>
                     <Link href="#contact" passHref className="block px-4 py-2 text-cream text-lg w-full text-center hover:text-cream">
                             Contact

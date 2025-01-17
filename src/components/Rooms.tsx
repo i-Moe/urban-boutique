@@ -1,18 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import WavyDivider from "../assets/something/wavy-steps-mirrored.svg";
-
-// Importe as imagens com next/image
-// import familyRoomImage from "/images/familyNew.jpg";
-// import budgetDoubleRoomImage from "/images/budget.jpg";
-// import spaBathRoomImage from "/images/balcony.jpg";
-// import deluxeRoomImage from "/images/deluxe.jpg";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
+import Image from "next/image";
 
 const roomsData = [
   {
@@ -33,90 +26,87 @@ const roomsData = [
     description:
       "1 extra-large double bed. Relax and unwind in a spacious room with a spa bath.",
   },
-  {
-    image: "/images/deluxe.jpg",
-    title: "Deluxe Double or Twin Room with Balcony",
-    description:
-      "1 single bed and 1 large double bed. A stylish room with a balcony for a refreshing escape.",
-  },
 ];
 
 export default function Rooms() {
   return (
-    <>
-      <section
-        id="rooms"
-        className="py-40 mt-[-150px] z-[-200] relative bg-chillmint"
-        aria-labelledby="rooms-title"
-      >
-        <div className="max-w-screen">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2
-              id="rooms-title"
-              className="text-4xl font-bold text-choco text-center my-12"
-            >
-              Our Rooms
-            </h2>
-          </motion.div>
+    <section id="rooms">
+      <div className="container mx-auto max-w-5xl py-20 overflow-x-hidden">
 
-          {/* Swiper Slider */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2
+            id="rooms-title"
+            className="text-4xl font-bold text-choco text-center mb-8"
+          >
+            Our Rooms
+          </h2>
+        </motion.div>
+
+        {/* Desktop Grid */}
+        <div className="hidden lg:grid lg:grid-cols-3 lg:gap-8">
+          {roomsData.map((room, index) => (
+            <div
+              key={index}
+              className="bg-lightcream border border-choco shadow-lg rounded-lg overflow-hidden"
+            >
+              <Image
+                src={room.image}
+                alt={room.title}
+                width={400}
+                height={300}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold mb-2">{room.title}</h3>
+                <p className="text-gray-700">{room.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Swiper for Medium and Small Screens */}
+        <div className="lg:hidden">
           <Swiper
-            modules={[Autoplay, Pagination, Navigation]}
-            spaceBetween={10}
-            slidesPerView={1}
-            centeredSlides={true}
-            loop={true}
-            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            modules={[Navigation, Pagination]}
+            navigation
             pagination={{ clickable: true }}
-            navigation={true}
+            spaceBetween={16}
+            centeredSlides={true}
+            slidesPerView={1.2}
+            initialSlide={0}
             breakpoints={{
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              640: {
+                slidesPerView: 1.5,
+                spaceBetween: 24,
+                initialSlide: 1,
+              },
             }}
           >
             {roomsData.map((room, index) => (
               <SwiperSlide key={index}>
-                <div className="px-4">
-                  <div className="bg-cream border border-choco rounded-lg shadow-xl overflow-hidden h-full flex flex-col min-h-[400px]">
-                    {/* Imagem usando next/image */}
-                    <div className="relative w-full h-56">
-                      <Image
-                        src={room.image}
-                        alt={room.title}
-                        layout="fill"
-                        objectFit="cover"
-                        quality={90}
-                        priority={index === 0} // Prioriza a primeira imagem
-                      />
-                    </div>
-                    <div className="p-6 text-left flex-grow flex flex-col">
-                      <h3 className="text-2xl font-semibold mb-2">
-                        {room.title}
-                      </h3>
-                      <p className="text-lg leading-6">{room.description}</p>
-                    </div>
+                <div className="bg-lightcream border border-choco shadow-lg rounded-lg overflow-hidden">
+                  <Image
+                    src={room.image}
+                    alt={room.title}
+                    width={400}
+                    height={300}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="text-xl font-semibold mb-2">{room.title}</h3>
+                    <p className="text-gray-700">{room.description}</p>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-      </section>
-
-      {/* Wavy Divider */}
-      {/* <Image
-        src={WavyDivider}
-        alt="Wavy divider"
-        width={1920}
-        height={150}
-        priority
-        className="block w-full mt-[-3px]"
-      /> */}
-    </>
+      </div>
+    </section>
   );
 }

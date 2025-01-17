@@ -60,7 +60,7 @@ const About = () => {
     <>
       <section
         id="about"
-        className="py-24 sm:pb-40 bg-cream relative z-[-100]"
+        className="py-20 bg-cream relative z-[-100]"
       >
         <div className="container-max-w-5xl mt-14">
           <div className="flex flex-col md:flex-row items-center">

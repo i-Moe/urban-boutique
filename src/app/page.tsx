@@ -59,7 +59,7 @@ export default function Home() {
         <Blog />
         <Contact />
 
-        <section className="py-16 text-center" aria-label="Unique guest experience at Urban Boutique Hotel">
+        {/* <section className="py-16 text-center" aria-label="Unique guest experience at Urban Boutique Hotel">
           <h2 className="text-3xl font-bold mb-6" aria-label="Experience the Difference">
             Experience the Difference
           </h2>
@@ -77,7 +77,7 @@ export default function Home() {
               See More
             </a>
           </Link>
-        </section>
+        </section> */}
 
         <WhatsAppButton />
 

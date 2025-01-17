@@ -96,3 +96,34 @@ img {
   width: 100%;
   transform-origin: left;
 }
+
+
+.swiper {
+  overflow: visible !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: theme('colors.vitamin') !important; /* Ensure this color is applied */
+  font-weight: 700 !important;
+  font-size: 2rem !important; /* Override size */
+  width: 2.5rem !important; /* Override width */
+  height: 2.5rem !important; /* Override height */
+}
+
+
+/* Base Style for All Dots */
+.swiper-pagination-bullet {
+  background-color: theme('colors.vitamin') !important; /* Change dot color */
+}
+
+/* Style for Active Dot */
+.swiper-pagination-bullet-active {
+  background-color: theme('colors.vitamin') !important; /* Change active dot color */
+  transform: scale(1.3); 
+}
+
+/* Position the Pagination */
+.swiper-pagination {
+   bottom: -35px !important; 
+}

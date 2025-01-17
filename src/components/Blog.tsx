@@ -16,7 +16,7 @@ const Blog = () => {
   const latestArticles = articles.slice(0, 3); // Pega os 3 últimos artigos
 
   return (
-    <section className="py-11 bg-chillmint">
+    <section id="blog" className="py-11 bg-chillmint">
       <div className="container-max-w-5xl">
         <h1 className="text-4xl font-bold text-center my-8">Blog</h1>
         

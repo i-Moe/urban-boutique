@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="mt-2">
             <a href="#about" className="text-cream hover:text-vitamin mx-2">About</a>
             <a href="#rooms" className="text-cream hover:text-vitamin mx-2">Rooms</a>
-            <a href="#gallery" className="text-cream hover:text-vitamin mx-2">Gallery</a>
+            <a href="#blog" className="text-cream hover:text-vitamin mx-2">Blog</a>
             <a href="#contact" className="text-cream hover:text-vitamin mx-2">Contact</a>
           </div>
           <p className="text-sm my-2">&copy; {new Date().getFullYear()} Godines Hotel. All rights reserved.</p>
