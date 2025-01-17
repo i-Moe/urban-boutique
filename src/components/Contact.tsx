@@ -2,14 +2,11 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section
-      className="pt-16 pb-36 relative mb-[-110px] z-[-120]"
-      id="contact"
-    >
-      <div className="container-max-w-5xl">
+    <section id="contact">
+      <div className="container-max-w-5xl py-20">
         <h2 className="text-3xl font-bold text-center mb-8">Contact</h2>
         <div className="flex flex-wrap">
-          <div className="bg-lightcream p-8 rounded-md border border-choco shadow-xl h-full flex flex-col md:flex-row md:space-x-8">
+          <div className="bg-lightcream w-full p-8 rounded-md border border-choco shadow-xl h-full flex flex-col md:flex-row md:space-x-8">
             {/* Left Column: Contact Info */}
             <div className="md:w-1/2">
               <h3 className="text-xl font-semibold mb-4">Get In Touch</h3>
