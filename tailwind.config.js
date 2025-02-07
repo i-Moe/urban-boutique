@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Cormorant Garamond"', 'sans-serif'],
+        sans: ['var(--font-cormorant)', 'sans-serif'],
       },
       boxShadow: {
         'solid': '4px 4px 0px rgba(56, 50, 42, 1)',

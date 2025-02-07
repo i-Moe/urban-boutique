@@ -1,6 +1,14 @@
+import { Cormorant_Garamond } from "next/font/google";
 import { ReactNode } from "react";
 import "@/styles/globals.css";
 import "@/styles/tailwind.css";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap", // Prevents invisible text issues
+  variable: "--font-cormorant", // Creates a CSS variable for Tailwind
+});
 
 // Metadados globais (para todas as páginas)
 export const metadata = {
@@ -47,22 +55,8 @@ export const themeColor = "#028e87";
 // Layout principal do site
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" aria-label="Urban Boutique Hotel Official Site">
+    <html lang="en" className={cormorant.variable} aria-label="Urban Boutique Hotel Official Site">
       <head>
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap"
-          rel="stylesheet"
-          fetchPriority="high"
-        />
         <link
           rel="preload"
           href="/images/hero1200w.webp"
